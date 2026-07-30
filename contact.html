@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — El Kissi Imad</title>
+<meta name="description" content="Dites-moi ce qui vous bloque. Réponse rapide, une première idée et un prix.">
+<meta name="theme-color" content="#F4700A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F4700A'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='Space Mono, monospace' font-weight='700' font-size='60'>I</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.ct{padding:64px 0 90px}
+.ct .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.ct h1{font-family:var(--disp);font-weight:900;font-size:clamp(40px,6vw,84px);line-height:.9;letter-spacing:-.035em;margin-top:14px}
+.ct h1 .o{color:var(--orange)}
+.ct .lede{color:var(--ink-soft);font-size:18px;margin-top:20px;max-width:44ch}
+.channels{margin-top:36px;display:flex;flex-direction:column;gap:12px}
+.chan{display:flex;align-items:center;gap:16px;border:1px solid var(--line-2);border-radius:6px;padding:16px 18px;transition:transform .22s,box-shadow .22s,border-color .22s;background:var(--card)}
+.chan:hover{transform:translateY(-2px);box-shadow:5px 5px 0 var(--orange);border-color:var(--orange)}
+.chan .ic{width:44px;height:44px;border-radius:8px;display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:18px;color:#fff;flex-shrink:0}
+.chan:nth-child(1) .ic{background:var(--green)}
+.chan:nth-child(2) .ic{background:var(--blue)}
+.chan:nth-child(3) .ic{background:var(--orange)}
+.chan .t b{font-family:var(--disp);font-weight:700;font-size:16px;display:block}
+.chan .t span{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft)}
+.chan .arw{margin-left:auto;font-size:18px;color:var(--ink-soft)}
+.formcard{background:var(--ink);color:var(--paper);border-radius:8px;padding:40px 36px;position:relative;overflow:hidden;box-shadow:10px 10px 0 var(--blue)}
+.formcard::after{content:"";position:absolute;top:-40%;right:-10%;width:340px;height:340px;background:radial-gradient(circle,rgba(244,112,10,.4),transparent 70%)}
+.formcard .eyebrow{color:var(--orange)}
+.formcard h2{font-family:var(--disp);font-weight:800;font-size:28px;letter-spacing:-.02em;margin:10px 0 8px;position:relative}
+.formcard .sub{color:rgba(236,231,223,.62);font-size:14px;margin-bottom:24px;position:relative}
+.formcard form{position:relative}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f{margin-bottom:14px}
+.f label{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:rgba(236,231,223,.6);display:block;margin-bottom:6px}
+.f input,.f textarea,.f select{width:100%;background:rgba(236,231,223,.06);border:1px solid rgba(236,231,223,.22);border-radius:6px;padding:12px 13px;color:var(--paper);font-family:var(--body);font-size:14px;cursor:none}
+.f input:focus,.f textarea:focus,.f select:focus{outline:none;border-color:var(--orange);background:rgba(236,231,223,.1)}
+.f textarea{resize:vertical;min-height:96px}
+.f select option{color:#000}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tagbtn{font-family:var(--mono);font-size:12px;border:1px solid rgba(236,231,223,.24);border-radius:40px;padding:7px 13px;cursor:none;background:transparent;color:rgba(236,231,223,.75);transition:.2s}
+.tagbtn.on{background:var(--orange);color:#fff;border-color:var(--orange)}
+.snd{width:100%;justify-content:center;margin-top:6px}
+.faq{border-top:1px solid var(--line);background:var(--card)}
+.faq .wrap{padding:70px 30px;max-width:820px}
+.faq h2{font-family:var(--disp);font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-.02em;margin-bottom:30px}
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;text-align:left;background:none;border:0;padding:20px 0;cursor:none;font-family:var(--disp);font-weight:700;font-size:19px;letter-spacing:-.01em;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink)}
+.qa button .pm{font-family:var(--mono);color:var(--orange);font-size:22px;transition:transform .25s}
+.qa.open button .pm{transform:rotate(45deg)}
+.qa .a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.qa .a p{color:var(--ink-soft);font-size:16px;line-height:1.6;padding-bottom:22px;max-width:60ch}
+@media(max-width:900px){.ct .wrap{grid-template-columns:1fr;gap:40px}}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="fr page">
+
+<!-- HEADER AVEC LE MENU RESSOURCES -->
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><span class="mk">I</span>EL KISSI IMAD</a>
+    <nav class="nav-links">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="tips.html"><span data-fr>Tips</span><span data-en>Tips</span></a>
+      <a href="ressources.html"><span data-fr>Ressources</span><span data-en>Resources</span></a>
+      <a href="contact.html" class="active"><span data-fr>Contact</span><span data-en>Contact</span></a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang"><button class="on" id="lf" onclick="setLang('fr')">FR</button><button id="le" onclick="setLang('en')">EN</button></div>
+      <a href="https://wa.me/212618593795" target="_blank" rel="noopener" class="btn solid magnet">WhatsApp<span class="arw">↗</span></a>
+      <button class="mtog" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mm" id="mm">
+  <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+  <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+  <a href="tips.html"><span data-fr>Tips</span><span data-en>Tips</span></a>
+  <a href="ressources.html"><span data-fr>Ressources</span><span data-en>Resources</span></a>
+  <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+</div>
+
+<section class="ct">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow o">Contact</span>
+      <h1 data-fr>Dites-moi juste<br>ce qui vous <span class="o">bloque</span>.</h1>
+      <h1 data-en class="blk">Just tell me<br>what's <span class="o">stuck</span>.</h1>
+      <p class="lede" data-fr>Réponse rapide, avec une première idée et un ordre de prix. Pas de discours commercial, on va droit au but.</p>
+      <p class="lede blk" data-en>Quick reply, with a first idea and a price range. No sales pitch, straight to the point.</p>
+      <div class="channels">
+        <a href="https://wa.me/212618593795" target="_blank" rel="noopener" class="chan magnet">
+          <span class="ic">WA</span>
+          <span class="t"><b>WhatsApp</b><span>+212 618 593 795</span></span>
+          <span class="arw">↗</span>
+        </a>
+        <a href="mailto:elkissiimad9@gmail.com" class="chan magnet">
+          <span class="ic">@</span>
+          <span class="t"><b>Email</b><span>elkissiimad9@gmail.com</span></span>
+          <span class="arw">↗</span>
+        </a>
+        <a href="https://elkissiimad9.github.io/portfolio/" target="_blank" rel="noopener" class="chan magnet">
+          <span class="ic">📍</span>
+          <span class="t"><b data-fr>Localisation</b><b data-en class="blk">Location</b><span data-fr>Rabat, Maroc · remote France</span><span data-en>Rabat, Morocco · remote France</span></span>
+          <span class="arw">↗</span>
+        </a>
+      </div>
+    </div>
+    <div class="formcard">
+      <span class="eyebrow"><span data-fr>Formulaire</span><span data-en>Form</span></span>
+      <h2 data-fr>Parlez-moi du projet</h2><h2 data-en class="blk">Tell me about the project</h2>
+      <p class="sub" data-fr>Deux minutes suffisent. Je reviens vers vous vite.</p>
+      <p class="sub blk" data-en>Two minutes is enough. I'll get back to you fast.</p>
+      <form onsubmit="return sendForm(event)">
+        <div class="chips" id="need">
+          <button type="button" class="tagbtn on" data-n="seo">SEO/GEO</button>
+          <button type="button" class="tagbtn" data-n="ads">Ads</button>
+          <button type="button" class="tagbtn" data-n="video"><span data-fr>Vidéo</span><span data-en>Video</span></button>
+          <button type="button" class="tagbtn" data-n="landing">Landing</button>
+          <button type="button" class="tagbtn" data-n="other"><span data-fr>Autre</span><span data-en>Other</span></button>
+        </div>
+        <div class="row">
+          <div class="f"><label data-fr>Votre nom</label><label data-en class="blk">Your name</label><input type="text" required></div>
+          <div class="f"><label>Email</label><input type="email" required></div>
+        </div>
+        <div class="f"><label data-fr>Budget approximatif</label><label data-en class="blk">Rough budget</label>
+          <select>
+            <option data-fr>Je ne sais pas encore</option>
+            <option>&lt; 500 €</option>
+            <option>500 – 1500 €</option>
+            <option>1500 – 5000 €</option>
+            <option>&gt; 5000 €</option>
+          </select>
+        </div>
+        <div class="f"><label data-fr>C'est quoi le projet ?</label><label data-en class="blk">What's the project?</label><textarea required></textarea></div>
+        <button class="btn solid-o snd magnet" type="submit"><span data-fr>Envoyer la demande</span><span data-en>Send request</span><span class="arw">↗</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2 data-fr>Les questions qu'on me pose</h2><h2 data-en class="blk">Questions I get asked</h2>
+    <div class="qa">
+      <button onclick="toggleQa(this)"><span data-fr>Vous travaillez avec des clients hors du Maroc ?</span><span data-en class="blk">Do you work with clients outside Morocco?</span><span class="pm">+</span></button>
+      <div class="a"><p data-fr>Oui, tout se fait en remote. Je suis basé à Rabat et je travaille régulièrement à distance pour la France. Le fuseau horaire n'est pas un souci.</p><p data-en class="blk">Yes, everything runs remotely. I'm based in Rabat and work regularly remote for France. Timezone isn't an issue.</p></div>
+    </div>
+    <div class="qa">
+      <button onclick="toggleQa(this)"><span data-fr>Combien de temps pour voir des résultats ?</span><span data-en class="blk">How long before I see results?</span><span class="pm">+</span></button>
+      <div class="a"><p data-fr>Ça dépend du levier. Une campagne d'ads peut bouger en quelques jours. Le SEO/GEO, c'est plutôt quelques semaines. Je vous donne une estimation honnête dès le premier appel.</p><p data-en class="blk">Depends on the lever. Ads can move in a few days. SEO/GEO is more like weeks. Honest estimates on the first call.</p></div>
+    </div>
+    <div class="qa">
+      <button onclick="toggleQa(this)"><span data-fr>Comment vous facturez ?</span><span data-en class="blk">How do you charge?</span><span class="pm">+</span></button>
+      <div class="a"><p data-fr>Au projet ou au forfait mensuel, selon ce qui a du sens pour vous. Le budget pub reste à part et va directement aux plateformes.</p><p data-en class="blk">Per project or monthly retainer. Ad spend stays separate and goes straight to the platforms.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <span class="fb">EL KISSI IMAD</span>
+    <span class="fm" data-fr>© The One You Need · Rabat &amp; Remote France</span>
+    <span class="fm blk" data-en>© The One You Need · Rabat &amp; Remote France</span>
+    <div class="fs">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="tips.html">Tips</a>
+      <a href="ressources.html">Ressources</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+document.querySelectorAll('.tagbtn').forEach(b=>b.addEventListener('click',()=>b.classList.toggle('on')));
+function toggleQa(btn){
+  const qa=btn.closest('.qa');const a=qa.querySelector('.a');
+  const open=qa.classList.toggle('open');
+  a.style.maxHeight=open?a.scrollHeight+'px':'0';
+}
+</script>
+</body>
+</html>

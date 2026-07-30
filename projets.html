@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets — El Kissi Imad</title>
+<meta name="description" content="Études de cas : assurance, hôtellerie, conseil B2B. Ce que j'ai fait et l'écart créé.">
+<meta name="theme-color" content="#1D3BE8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F4700A'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='Space Mono, monospace' font-weight='700' font-size='60'>I</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.ph{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.ph h1{font-family:var(--disp);font-weight:900;font-size:clamp(44px,6.5vw,92px);line-height:.9;letter-spacing:-.035em;margin-top:16px}
+.ph h1 .o{color:var(--orange)}
+.ph p{color:var(--ink-soft);font-size:18px;margin-top:18px;max-width:52ch}
+.filter{display:flex;gap:9px;flex-wrap:wrap;margin-top:34px}
+.chip{font-family:var(--mono);font-size:12.5px;border:1px solid var(--line-2);border-radius:40px;padding:8px 15px;cursor:none;background:transparent;transition:.2s;color:var(--ink-soft)}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip:hover{border-color:var(--orange);color:var(--ink)}
+
+.cases{padding:70px 0}
+.case{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border:1px solid var(--line-2);border-radius:6px;overflow:hidden;margin-bottom:30px;background:var(--card);transition:box-shadow .3s,transform .3s}
+.case:hover{transform:translateY(-3px);box-shadow:10px 10px 0 var(--blue)}
+.case:nth-child(even):hover{box-shadow:10px 10px 0 var(--orange)}
+.case .side{background:var(--ink);color:var(--paper);padding:34px 30px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.case:nth-child(even) .side{order:2}
+.case .side .cat{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--orange)}
+.case:nth-child(even) .side .cat{color:#8f9dff}
+.case .side h3{font-family:var(--disp);font-weight:800;font-size:32px;margin:14px 0 6px;letter-spacing:-.02em}
+.case .side .role{font-family:var(--mono);font-size:12px;color:rgba(236,231,223,.6)}
+.case .side .stats{margin-top:auto;padding-top:26px;display:flex;gap:26px;flex-wrap:wrap}
+.case .side .stats div .v{font-family:var(--disp);font-weight:900;font-size:30px;color:#3ee089;letter-spacing:-.02em}
+.case .side .stats div .k{font-family:var(--mono);font-size:10px;color:rgba(236,231,223,.55);text-transform:uppercase;margin-top:3px}
+.case .side .bignum{position:absolute;top:-24px;right:6px;font-family:var(--disp);font-weight:900;font-size:130px;color:rgba(236,231,223,.05)}
+.case .body{padding:34px 32px;display:flex;flex-direction:column}
+.case .body .blk-t{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.case .body h4{font-family:var(--disp);font-weight:700;font-size:16px;margin-bottom:14px}
+.case .body p{color:var(--ink-soft);font-size:15px;line-height:1.55;margin-bottom:20px}
+.case .body .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}
+.case .body .tags span{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:40px;padding:5px 11px;color:var(--ink-soft)}
+.stack{border-top:1px solid var(--line);background:var(--card)}
+.stack .wrap{padding:70px 30px}
+.stack h2{font-family:var(--disp);font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-.02em;margin-bottom:26px}
+.caps-in{display:flex;flex-wrap:wrap;gap:9px}
+.cap{font-family:var(--mono);font-size:12.5px;border:1px solid var(--line-2);border-radius:40px;padding:8px 14px;color:var(--ink-soft);transition:.2s}
+.cap:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
+.endcta{padding:90px 0;text-align:center}
+.endcta h2{font-family:var(--disp);font-weight:900;font-size:clamp(30px,4.6vw,56px);letter-spacing:-.03em;line-height:1}
+.endcta h2 .o{color:var(--orange)}
+.endcta p{color:var(--ink-soft);margin:18px auto 0;max-width:40ch;font-size:17px}
+.endcta .btnrow{justify-content:center;margin-top:30px}
+@media(max-width:820px){
+  .case{grid-template-columns:1fr}
+  .case:nth-child(even) .side{order:0}
+  .case .side .bignum{font-size:90px}
+}
+</style>
+</head>
+<body class="fr page">
+
+<!-- HEADER AVEC LE MENU RESSOURCES -->
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><span class="mk">I</span>EL KISSI IMAD</a>
+    <nav class="nav-links">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html" class="active"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="tips.html"><span data-fr>Tips</span><span data-en>Tips</span></a>
+      <a href="ressources.html"><span data-fr>Ressources</span><span data-en>Resources</span></a>
+      <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang"><button class="on" id="lf" onclick="setLang('fr')">FR</button><button id="le" onclick="setLang('en')">EN</button></div>
+      <a href="contact.html" class="btn solid magnet"><span data-fr>On parle ?</span><span data-en>Let's talk</span><span class="arw">↗</span></a>
+      <button class="mtog" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mm" id="mm">
+  <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+  <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+  <a href="tips.html"><span data-fr>Tips</span><span data-en>Tips</span></a>
+  <a href="ressources.html"><span data-fr>Ressources</span><span data-en>Resources</span></a>
+  <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+</div>
+
+<section class="ph">
+  <div class="wrap">
+    <span class="eyebrow o"><span data-fr>Projets</span><span data-en>Work</span></span>
+    <h1 data-fr>Ce que j'ai fait,<br>et ce que ça a <span class="o">donné</span>.</h1>
+    <h1 data-en class="blk">What I did,<br>and what it <span class="o">delivered</span>.</h1>
+    <p data-fr>Six collabs, du Maroc et en remote. Les chiffres verts montrent l'écart créé sur chaque mission. Cliquez sur un filtre pour trier.</p>
+    <p data-en class="blk">Six collabs, from Morocco and remote. The green numbers show the gap created on each project. Tap a filter to sort.</p>
+    <div class="filter" id="filter">
+      <button class="chip on" data-f="all"><span data-fr>Tout</span><span data-en>All</span></button>
+      <button class="chip" data-f="ads">Ads</button>
+      <button class="chip" data-f="seo">SEO</button>
+      <button class="chip" data-f="social">Social</button>
+      <button class="chip" data-f="brand">Branding</button>
+      <button class="chip" data-f="ux">UX</button>
+    </div>
+  </div>
+</section>
+
+<section class="cases">
+  <div class="wrap" id="caselist">
+    <article class="case rv" data-cat="ads seo">
+      <div class="side"><span class="cat">Assurance · Ads</span><h3>L'Assurance Lyazidi</h3><span class="role">Campagne acquisition</span>
+        <div class="stats"><div><span class="v">+61%</span><span class="k">leads</span></div><div><span class="v">−28%</span><span class="k">CPL</span></div></div>
+        <span class="bignum">01</span></div>
+      <div class="body">
+        <span class="blk-t" data-fr>Le problème</span><span class="blk-t blk" data-en>The problem</span>
+        <h4 data-fr>Beaucoup de clics, peu de demandes de devis.</h4><h4 data-en class="blk">Lots of clicks, few quote requests.</h4>
+        <p data-fr>On a repris le message de zéro : des visuels francs qui rassurent, une promesse simple, et une landing page adaptée. Résultat, le coût par lead a baissé pendant que le volume montait.</p>
+        <p data-en class="blk">We rebuilt the message from scratch: honest visuals, simple promise, and an aligned landing page. Cost per lead dropped while volume went up.</p>
+        <div class="tags"><span>Meta Ads</span><span>Landing Page</span><span>Copywriting</span><span>A/B Testing</span></div>
+      </div>
+    </article>
+    <article class="case rv" data-cat="brand ads">
+      <div class="side"><span class="cat">Branding · Data</span><h3>AIMPACTIFY Maroc</h3><span class="role">Identité &amp; acquisition</span>
+        <div class="stats"><div><span class="v">+2.4×</span><span class="k">reach</span></div><div><span class="v">+39%</span><span class="k">CTR</span></div></div>
+        <span class="bignum">02</span></div>
+      <div class="body">
+        <span class="blk-t" data-fr>Le problème</span><span class="blk-t blk" data-en>The problem</span>
+        <h4 data-fr>Une marque tech qui n'avait pas l'air d'une marque tech.</h4><h4 data-en class="blk">A tech brand that didn't look like one.</h4>
+        <p data-fr>Branding appuyé sur les données de leur audience. Un système visuel clair, réutilisable partout, qui inspire confiance dès la première seconde.</p>
+        <p data-en class="blk">Branding built on audience data. A clear visual system, reusable everywhere, that earns trust in the first second.</p>
+        <div class="tags"><span>Branding</span><span>Design UI</span><span>Meta Ads</span><span>Analytics</span></div>
+      </div>
+    </article>
+    <article class="case rv" data-cat="social">
+      <div class="side"><span class="cat">Social · Growth</span><h3>Nsayblik</h3><span class="role" data-fr>Contenu viral</span><span class="role blk" data-en>Viral content</span>
+        <div class="stats"><div><span class="v">+310%</span><span class="k" data-fr>vues</span><span class="k" data-en>views</span></div><div><span class="v">+5.2×</span><span class="k" data-fr>partages</span><span class="k" data-en>shares</span></div></div>
+        <span class="bignum">03</span></div>
+      <div class="body">
+        <span class="blk-t" data-fr>Le problème</span><span class="blk-t blk" data-en>The problem</span>
+        <h4 data-fr>Du bon contenu que personne ne voyait.</h4><h4 data-en class="blk">Good content nobody saw.</h4>
+        <p data-fr>Le fond était là, il manquait le hook. On a retravaillé les trois premières secondes de chaque vidéo et le rythme du montage.</p>
+        <p data-en class="blk">The substance was there, the hook was missing. We reworked the first three seconds of each video and the edit rhythm.</p>
+        <div class="tags"><span>Reels / TikTok</span><span>Copywriting</span><span>Editing</span></div>
+      </div>
+    </article>
+    <article class="case rv" data-cat="ux">
+      <div class="side"><span class="cat">Hôtellerie · UX</span><h3>The Gate Morocco</h3><span class="role" data-fr>Parcours de réservation</span><span class="role blk" data-en>Booking journey</span>
+        <div class="stats"><div><span class="v">+47%</span><span class="k" data-fr>résas</span><span class="k" data-en>bookings</span></div><div><span class="v">−22%</span><span class="k" data-fr>rebond</span><span class="k" data-en>bounce</span></div></div>
+        <span class="bignum">04</span></div>
+      <div class="body">
+        <span class="blk-t" data-fr>Le problème</span><span class="blk-t blk" data-en>The problem</span>
+        <h4 data-fr>Un lieu premium, un site qui ne le montrait pas.</h4><h4 data-en class="blk">A premium place, a site that didn't show it.</h4>
+        <p data-fr>On a aligné l'expérience en ligne sur l'expérience réelle : moins d'étapes, plus de respiration, et un chemin de réservation évident.</p>
+        <p data-en class="blk">We aligned the online experience with the real one: fewer steps, more breathing room, and an obvious booking path.</p>
+        <div class="tags"><span>UX / UI</span><span>Landing Page</span><span>CRO</span></div>
+      </div>
+    </article>
+    <article class="case rv" data-cat="ads seo brand">
+      <div class="side"><span class="cat">B2B · Stratégie</span><h3>Linkopus Consulting</h3><span class="role" data-fr>Croissance globale</span><span class="role blk" data-en>Full-funnel growth</span>
+        <div class="stats"><div><span class="v">+58%</span><span class="k" data-fr>demandes</span><span class="k" data-en>inbound</span></div><div><span class="v">4.1×</span><span class="k">ROAS</span></div></div>
+        <span class="bignum">05</span></div>
+      <div class="body">
+        <span class="blk-t" data-fr>Le problème</span><span class="blk-t blk" data-en>The problem</span>
+        <h4 data-fr>Des actions marketing qui ne se parlaient pas.</h4><h4 data-en class="blk">Marketing moves that didn't talk to each other.</h4>
+        <p data-fr>Stratégie, contenu, design et ads, branchés ensemble sur un seul objectif. Le coût d'acquisition baisse et les demandes qualifiées montent.</p>
+        <p data-en class="blk">Strategy, content, design and ads, wired together toward one goal. Acquisition cost drops and qualified inbound climbs.</p>
+        <div class="tags"><span>Stratégie</span><span>SEO / SEA</span><span>Google Ads</span><span>Branding</span></div>
+      </div>
+    </article>
+    <article class="case rv" data-cat="social ads seo brand ux">
+      <div class="side"><span class="cat" data-fr>Projet perso</span><span class="cat blk" data-en>Personal project</span><h3>AJIboost</h3><span class="role" data-fr>Mon labo</span><span class="role blk" data-en>My lab</span>
+        <div class="stats"><div><span class="v" data-fr>Terrain</span><span class="v" data-en>Field</span><span class="k" data-fr>d'essai</span><span class="k" data-en>test</span></div><div><span class="v">100%</span><span class="k" data-fr>maison</span><span class="k" data-en>mine</span></div></div>
+        <span class="bignum">06</span></div>
+      <div class="body">
+        <span class="blk-t" data-fr>L'idée</span><span class="blk-t blk" data-en>The idea</span>
+        <h4 data-fr>Tester mes propres théories avant de les vendre.</h4><h4 data-en class="blk">Test my own theories before selling them.</h4>
+        <p data-fr>AJIboost, c'est là que je teste des choses sans risque pour un client. Chaque tactique que je propose est passée par ici d'abord.</p>
+        <p data-en class="blk">AJIboost is where I test things with no client at risk. Every tactic I pitch went through here first.</p>
+        <div class="tags"><span>Strategy</span><span>Content</span><span>Ads</span><span>Everything</span></div>
+      </div>
+    </article>
+    <p id="empty" class="tiny" style="display:none;text-align:center;padding:40px 0" data-fr>Rien dans cette catégorie pour l'instant.</p>
+  </div>
+</section>
+
+<section class="stack">
+  <div class="wrap">
+    <h2 data-fr>Ce que je sais faire</h2><h2 data-en class="blk">What I can do</h2>
+    <div class="caps-in">
+      <span class="cap">SEO / GEO</span><span class="cap">Google Ads</span><span class="cap">Meta Ads</span><span class="cap">A/B Testing</span><span class="cap">GA4</span><span class="cap">Analytics</span><span class="cap">Landing Pages</span><span class="cap">CRO</span><span class="cap">Copywriting</span><span class="cap">Retargeting</span><span class="cap">Automation n8n</span><span class="cap">Reels / TikTok</span><span class="cap">Email</span><span class="cap">UX / UI</span><span class="cap">Branding</span>
+    </div>
+  </div>
+</section>
+
+<section class="endcta">
+  <div class="wrap">
+    <h2 data-fr>Votre projet, le <span class="o">07</span> ?</h2>
+    <h2 data-en class="blk">Your project, number <span class="o">07</span>?</h2>
+    <p data-fr>Dites-moi où vous en êtes. Je vous dis en 15 minutes ce que je ferais en premier.</p>
+    <p data-en class="blk">Tell me where you're at. In 15 minutes I'll tell you what I'd do first.</p>
+    <div class="btnrow">
+      <a href="contact.html" class="btn solid-o magnet"><span data-fr>Discuter d'un projet</span><span data-en>Discuss a project</span><span class="arw">↗</span></a>
+      <a href="tips.html" class="btn ghost"><span data-fr>Lire mes tips d'abord</span><span data-en>Read my tips first</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <span class="fb">EL KISSI IMAD</span>
+    <span class="fm" data-fr>© The One You Need · Rabat &amp; Remote France</span>
+    <span class="fm blk" data-en>© The One You Need · Rabat &amp; Remote France</span>
+    <div class="fs">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="tips.html">Tips</a>
+      <a href="ressources.html">Ressources</a>
+      <a href="https://wa.me/212618593795" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+const chips=document.querySelectorAll('.chip');
+const cases=document.querySelectorAll('.case');
+const empty=document.getElementById('empty');
+chips.forEach(c=>c.addEventListener('click',()=>{
+  chips.forEach(x=>x.classList.remove('on'));c.classList.add('on');
+  const f=c.dataset.f;let shown=0;
+  cases.forEach(cs=>{
+    const ok=f==='all'||cs.dataset.cat.includes(f);
+    cs.style.display=ok?'':'none';if(ok)shown++;
+  });
+  empty.style.display=shown?'none':'block';
+}));
+</script>
+</body>
+</html>

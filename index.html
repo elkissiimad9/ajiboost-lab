@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Kissi Imad — Marketing Digital, SEO/GEO & Acquisition Freelance</title>
+<meta name="description" content="SEO/GEO, pub Meta et Google, vidéo courte. Objectif simple : plus de clients qualifiés. Basé au Maroc, remote pour la France.">
+<meta name="theme-color" content="#1D3BE8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F4700A'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='Space Mono, monospace' font-weight='700' font-size='60'>I</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.hero{padding:70px 0 0;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:start}
+.hero h1{font-family:var(--disp);font-weight:900;font-size:clamp(46px,7.4vw,110px);line-height:.88;letter-spacing:-.035em;margin:20px 0 0}
+.hero h1 .o{color:var(--orange)}
+.hero h1 .b{color:var(--blue)}
+.hero h1 .hollow{-webkit-text-stroke:1.7px var(--ink);color:transparent;transition:color .4s,-webkit-text-stroke .4s}
+.hero h1 .hollow:hover{color:var(--orange);-webkit-text-stroke:1.7px var(--orange)}
+.hero-sub{margin-top:28px;font-size:19px;line-height:1.5;max-width:40ch}
+.hero-sub .q{color:var(--ink-soft)}
+.hero-cta{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap}
+.hero-note{margin-top:22px;font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.03em}
+.hero-side{padding-top:8px}
+.pf{position:relative;border:1px solid var(--line-2);border-radius:3px;overflow:hidden;background:var(--paper-2);aspect-ratio:4/5;box-shadow:8px 8px 0 var(--blue);transition:box-shadow .35s}
+.pf:hover{box-shadow:8px 8px 0 var(--orange)}
+.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(.2) contrast(1.03)}
+.pf .tag{position:absolute;top:12px;left:12px;background:rgba(23,22,20,.85);color:var(--paper);font-family:var(--mono);font-size:11px;font-weight:700;padding:6px 11px;border-radius:40px;display:flex;align-items:center;gap:7px}
+.blip{width:7px;height:7px;border-radius:50%;background:#3ee089;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(62,224,137,.5)}70%{box-shadow:0 0 0 7px rgba(62,224,137,0)}100%{box-shadow:0 0 0 0 rgba(62,224,137,0)}}
+.pin{margin-top:16px;font-family:var(--mono);font-size:12px;color:var(--ink-soft);border:1px solid var(--line);border-left:3px solid var(--orange);padding:11px 14px;background:var(--card);line-height:1.6}
+.pin b{color:var(--ink)}
+
+.hcount{display:flex;gap:32px;margin-top:34px;flex-wrap:wrap}
+.hcount div{display:flex;flex-direction:column;align-items:flex-start}
+.hcount div .v{font-family:var(--disp);font-weight:900;font-size:36px;letter-spacing:-.02em;line-height:1;display:block}
+.hcount div:nth-child(1) .v{color:var(--blue)}
+.hcount div:nth-child(2) .v{color:var(--orange)}
+.hcount div:nth-child(3) .v{color:var(--green)}
+.hcount div .k{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;margin-top:6px;display:block}
+
+.mq{margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:var(--ink)}
+.mq-t{display:flex;white-space:nowrap;width:max-content;animation:roll 34s linear infinite}
+.mq:hover .mq-t{animation-play-state:paused}
+.mq-i{font-family:var(--mono);font-size:13px;color:rgba(236,231,223,.6);padding:14px 26px;display:flex;gap:9px;align-items:center}
+.mq-i b{color:var(--paper)}.mq-i .g{color:#3ee089;font-weight:700}.mq-i .or{color:var(--orange);font-weight:700}
+.mq-i::after{content:"✦";color:rgba(236,231,223,.3);font-size:10px}
+@keyframes roll{to{transform:translateX(-50%)}}
+
+.services{border-top:1px solid var(--line)}
+.svc-list{border-top:1px solid var(--line-2)}
+.svc{display:grid;grid-template-columns:50px 1.1fr 1.15fr auto;gap:26px;align-items:center;padding:30px 4px;border-bottom:1px solid var(--line);transition:background .22s,padding .22s}
+.svc:hover{background:var(--card);padding-left:18px;padding-right:18px}
+.svc .n{font-family:var(--mono);font-size:13px;color:var(--orange);font-weight:700}
+.svc h3{font-family:var(--disp);font-weight:700;font-size:24px;letter-spacing:-.01em}
+.svc .d{color:var(--ink-soft);font-size:15px;line-height:1.5}
+.svc .m{font-family:var(--mono);text-align:right;white-space:nowrap}
+.svc .m .big{display:block;font-size:20px;font-weight:700;color:var(--green)}
+.svc .m .lb{color:var(--ink-soft);font-size:11px;letter-spacing:.03em}
+
+.teaser{border-top:1px solid var(--line)}
+.tz-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:22px}
+.tz{border:1px solid var(--line-2);border-radius:4px;padding:30px 28px;background:var(--card);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.tz:hover{transform:translateY(-3px);box-shadow:6px 6px 0 var(--blue)}
+.tz:nth-child(2):hover{box-shadow:6px 6px 0 var(--orange)}
+.tz:nth-child(3):hover{box-shadow:6px 6px 0 var(--green)}
+.tz .lab{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.tz:nth-child(1) .lab{color:var(--blue)}
+.tz:nth-child(2) .lab{color:var(--orange)}
+.tz:nth-child(3) .lab{color:var(--green)}
+.tz h3{font-family:var(--disp);font-weight:800;font-size:24px;margin:12px 0 10px;letter-spacing:-.02em}
+.tz p{color:var(--ink-soft);font-size:14.5px;margin-bottom:20px;flex:1}
+.tz .go{font-family:var(--mono);font-size:13px;font-weight:700;display:inline-flex;gap:7px;align-items:center;margin-top:auto}
+.tz:nth-child(1) .go{color:var(--blue)}
+.tz:nth-child(2) .go{color:var(--orange)}
+.tz:nth-child(3) .go{color:var(--green)}
+
+.quotes{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.qg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.q{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:26px 24px;display:flex;flex-direction:column;box-shadow:4px 4px 0 rgba(23,22,20,.06);transition:box-shadow .25s}
+.q:hover{box-shadow:4px 4px 0 var(--orange)}
+.q .s{color:var(--orange);font-size:14px;letter-spacing:2px;margin-bottom:15px}
+.q blockquote{font-family:var(--disp);font-weight:500;font-size:18px;line-height:1.42;letter-spacing:-.01em;flex:1}
+.q .w{margin-top:20px;display:flex;align-items:center;gap:11px;border-top:1px solid var(--line);padding-top:16px}
+.q .w .av{width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:14px}
+.q:nth-child(2) .w .av{background:var(--orange)}
+.q .w b{display:block;font-size:14px}.q .w span{color:var(--ink-soft);font-size:12px}
+
+.cta{padding:100px 0}
+.box{background:var(--ink);color:var(--paper);border-radius:6px;padding:56px 50px;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;position:relative;overflow:hidden;box-shadow:10px 10px 0 var(--orange)}
+.box::after{content:"";position:absolute;top:-45%;right:-8%;width:400px;height:400px;background:radial-gradient(circle,rgba(29,59,232,.5),transparent 70%)}
+.box::before{content:"";position:absolute;bottom:-40%;left:-6%;width:340px;height:340px;background:radial-gradient(circle,rgba(244,112,10,.4),transparent 70%)}
+.box h2{font-family:var(--disp);font-weight:900;font-size:clamp(32px,4.6vw,54px);line-height:.98;letter-spacing:-.03em;margin:16px 0 0;position:relative}
+.box p{color:rgba(236,231,223,.68);margin-top:16px;max-width:38ch;position:relative}
+.frm{position:relative}
+.frm .f{margin-bottom:13px}
+.frm label{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:rgba(236,231,223,.6);display:block;margin-bottom:6px}
+.frm input,.frm textarea{width:100%;background:rgba(236,231,223,.06);border:1px solid rgba(236,231,223,.22);border-radius:5px;padding:12px 13px;color:var(--paper);font-family:var(--body);font-size:14px;cursor:none}
+.frm input:focus,.frm textarea:focus{outline:none;border-color:var(--orange);background:rgba(236,231,223,.1)}
+.frm textarea{resize:vertical;min-height:80px}
+.frm .snd{width:100%;justify-content:center;margin-top:5px}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:36px}
+  .hero-side{max-width:330px}
+  .svc{grid-template-columns:32px 1fr;gap:12px 14px;padding:22px 4px}
+  .svc .d{grid-column:2}.svc .m{grid-column:2;text-align:left;margin-top:2px}
+  .svc .m .big{display:inline;font-size:15px}
+  .svc:hover{padding-left:8px;padding-right:8px}
+  .tz-grid{grid-template-columns:1fr}
+  .qg{grid-template-columns:1fr}
+  .box{grid-template-columns:1fr;padding:38px 28px;gap:32px}
+}
+</style>
+</head>
+<body class="fr page">
+
+<!-- HEADER AVEC LE MENU RESSOURCES -->
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><span class="mk">I</span>EL KISSI IMAD</a>
+    <nav class="nav-links">
+      <a href="index.html" class="active"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="tips.html"><span data-fr>Tips</span><span data-en>Tips</span></a>
+      <a href="ressources.html"><span data-fr>Ressources</span><span data-en>Resources</span></a>
+      <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang">
+        <button class="on" id="lf" onclick="setLang('fr')">FR</button>
+        <button id="le" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="contact.html" class="btn solid magnet"><span data-fr>On parle ?</span><span data-en>Let's talk</span><span class="arw">↗</span></a>
+      <button class="mtog" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mm" id="mm">
+  <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+  <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+  <a href="tips.html"><span data-fr>Tips</span><span data-en>Tips</span></a>
+  <a href="ressources.html"><span data-fr>Ressources</span><span data-en>Resources</span></a>
+  <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-main">
+      <span class="eyebrow o"><span data-fr>Imad, marketing digital &amp; acquisition freelance</span><span data-en>Imad, freelance digital marketer</span></span>
+      <h1 data-fr>Votre pub<br>vous <span class="b">coûte</span>.<br><span class="hollow">Moi je la fais</span> <span class="o">rapporter.</span></h1>
+      <h1 data-en class="blk">Your ads<br><span class="b">cost</span> money.<br><span class="hollow">I make them</span> <span class="o">pay back.</span></h1>
+      <p class="hero-sub" data-fr>SEO/GEO, Meta &amp; Google Ads, vidéo courte. <span class="q">Le but tient en une phrase : chaque dirham ou euro que vous mettez doit vous ramener un client, pas juste des vues.</span></p>
+      <p class="hero-sub blk" data-en>SEO/GEO, Meta &amp; Google ads, short-form video. <span class="q">One rule: every euro you put in should bring back a customer, not just views.</span></p>
+      
+      <div class="hcount">
+        <div>
+          <span class="v" data-count="18">0</span>
+          <span class="k" data-fr>projets livrés</span>
+          <span class="k" data-en>projects shipped</span>
+        </div>
+        <div>
+          <span class="v" data-count="6" data-suffix="+">0</span>
+          <span class="k" data-fr>marques accompagnées</span>
+          <span class="k" data-en>brands helped</span>
+        </div>
+        <div>
+          <span class="v" data-count="2" data-suffix=" marchés">0</span>
+          <span class="k" data-fr>Maroc &amp; France</span>
+          <span class="k" data-en>Morocco &amp; France</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="contact.html" class="btn solid-o magnet"><span data-fr>15 min pour voir où ça coince</span><span data-en>15 min to spot what's off</span><span class="arw">↗</span></a>
+        <a href="projets.html" class="btn ghost"><span data-fr>Regarder les projets</span><span data-en>See the work</span></a>
+      </div>
+      <p class="hero-note" data-fr>Gratuit, sans engagement. Vous repartez avec au moins une idée qui marche.</p>
+      <p class="hero-note blk" data-en>Free, no strings. You leave with at least one thing worth trying.</p>
+    </div>
+    <aside class="hero-side">
+      <div class="pf magnet">
+        <span class="tag"><span class="blip"></span><span data-fr>Dispo Remote</span><span data-en>Open Remote</span></span>
+        <img src="https://elkissiimad9.github.io/portfolio/images/profil.jpg" alt="El Kissi Imad">
+      </div>
+      <div class="pin"><b>Rabat</b> &amp; <b>France en Remote</b>.<br><span data-fr>Je bosse à distance avec des entreprises exigeantes.</span><span data-en>I work remote with demanding businesses.</span></div>
+    </aside>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div class="mq-t" id="mq"></div></div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow"><span data-fr>Ce que je fais</span><span data-en>What I do</span></span>
+      <h2 data-fr>Cinq leviers. Tous finissent en clients.</h2>
+      <h2 data-en class="blk">Five levers. All of them end in customers.</h2>
+      <p data-fr>Pas de jargon pour faire joli. Je vous dis ce que je fais, et je vous montre le chiffre que je vise.</p>
+      <p data-en class="blk">No jargon for show. I tell you what I do, and I show you the number I'm going for.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc rv">
+        <span class="n">01</span>
+        <h3>SEO &amp; GEO (Generative Engine Optimization)</h3>
+        <p class="d" data-fr>Je répare la technique, j'optimise pour Google et pour les moteurs IA (ChatGPT, Perplexity, SGE). Les gens vous trouvent tout seuls.</p>
+        <p class="d blk" data-en>I fix the tech, write for Google and AI engines (ChatGPT, Perplexity). People find you on their own.</p>
+        <div class="m"><span class="big">+128%</span><span class="lb" data-fr>de visites*</span><span class="lb" data-en>more visits*</span></div>
+      </div>
+      <div class="svc rv">
+        <span class="n">02</span>
+        <h3>Meta &amp; Google Ads</h3>
+        <p class="d" data-fr>Je teste, je coupe ce qui brûle du budget, je garde ce qui vend. Vous voyez où part chaque euro.</p>
+        <p class="d blk" data-en>I test, kill what burns budget, keep what sells. You see where every euro goes.</p>
+        <div class="m"><span class="big">−34%</span><span class="lb" data-fr>le coût par lead*</span><span class="lb" data-en>cost per lead*</span></div>
+      </div>
+      <div class="svc rv">
+        <span class="n">03</span>
+        <h3>Vidéo courte &amp; UGC Hooks</h3>
+        <p class="d" data-fr>Reels, TikTok, Shorts. Trois secondes pour accrocher, sinon on scrolle. Je m'occupe des trois secondes.</p>
+        <p class="d blk" data-en>Reels, TikTok, Shorts. You've got three seconds to hook, or they scroll. I handle those three seconds.</p>
+        <div class="m"><span class="big">3.1×</span><span class="lb" data-fr>d'engagement*</span><span class="lb" data-en>engagement*</span></div>
+      </div>
+      <div class="svc rv">
+        <span class="n">04</span>
+        <h3>Landing pages &amp; GA4</h3>
+        <p class="d" data-fr>Une page qui pousse à cliquer et un suivi GA4/GTM conforme (Consent Mode v2) pour piloter aux données exactes.</p>
+        <p class="d blk" data-en>A page built to convert, and clean GA4 tracking so you know what works. No more guessing.</p>
+        <div class="m"><span class="big">+42%</span><span class="lb" data-fr>de conversions*</span><span class="lb" data-en>conversions*</span></div>
+      </div>
+      <div class="svc rv">
+        <span class="n">05</span>
+        <h3>Automation &amp; CRM</h3>
+        <p class="d" data-fr>Connexion de vos formulaires avec n8n et votre CRM pour répondre aux prospects à la minute sans perdre de vente.</p>
+        <p class="d blk" data-en>Connect your lead forms to n8n &amp; CRM to follow up instantly with zero drop-off.</p>
+        <div class="m"><span class="big">100%</span><span class="lb" data-fr>leads suivis*</span><span class="lb" data-en>leads tracked*</span></div>
+      </div>
+    </div>
+    <p class="tiny rv" style="margin-top:20px" data-fr>* Ordres de grandeur, pour donner une idée. Je vous montre mes vrais chiffres pendant l'audit.</p>
+    <p class="tiny blk" style="margin-top:20px" data-en>* Ballpark figures, just to give you an idea. I'll show you the real numbers during the audit.</p>
+  </div>
+</section>
+
+<!-- SECTION MÉTHODE & ROI -->
+<section style="background: #171614; color: #ECE7DF; padding: 100px 0; border-top: 1px solid rgba(236,231,223,0.12); border-bottom: 1px solid rgba(236,231,223,0.12); position: relative; overflow: hidden;">
+  <div class="wrap">
+    
+    <div class="rv" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: end; padding-bottom: 56px; border-bottom: 1px solid rgba(236,231,223,0.12);">
+      <div>
+        <span style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); display: block; margin-bottom: 16px;">
+          ✦ Philosophie d'acquisition
+        </span>
+        <h2 style="font-family: var(--disp); font-weight: 900; font-size: clamp(34px, 4.5vw, 58px); line-height: 0.96; letter-spacing: -0.035em; color: #ECE7DF; margin: 0;">
+          Pas du joli.<br>Du <span style="color: var(--orange); font-style: italic;">mesurable</span>.
+        </h2>
+      </div>
+
+      <div>
+        <p style="color: rgba(236,231,223,0.7); font-size: 16.5px; line-height: 1.6; margin-bottom: 24px; max-width: 44ch;" data-fr>
+          Chaque dirham ou euro investi doit vous ramener un client qualifié. Pas de métriques de vanité, pas de rapports illisibles : uniquement ce qui rentre dans votre chiffre d'affaires.
+        </p>
+        <p style="color: rgba(236,231,223,0.7); font-size: 16.5px; line-height: 1.6; margin-bottom: 24px; max-width: 44ch;" class="blk" data-en style="display:none;">
+          Every dirham or euro spent must bring back a qualified customer. No vanity metrics, no complex jargon: just ROI.
+        </p>
+        <a href="projets.html" class="btn solid-o magnet">
+          <span data-fr>Voir mes cas réels</span><span data-en>See real cases</span>
+          <span class="arw">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="rv" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 48px; border: 1px solid rgba(236,231,223,0.15); background: rgba(255,255,255,0.015);">
+      
+      <div style="padding: 32px 24px; border-right: 1px solid rgba(236,231,223,0.15); transition: background 0.25s;" onmouseover="this.style.background='rgba(29,59,232,0.1)'" onmouseout="this.style.background='transparent'">
+        <span style="font-family: var(--mono); font-size: 10px; color: rgba(236,231,223,0.45); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 14px;">01 / ROAS MOYEN</span>
+        <div style="font-family: var(--disp); font-weight: 900; font-size: clamp(36px, 3.8vw, 54px); line-height: 1; color: var(--paper); letter-spacing: -0.03em;" data-count="4" data-suffix=".1×">0</div>
+        <p style="font-family: var(--mono); font-size: 11px; color: rgba(236,231,223,0.6); margin-top: 12px; line-height: 1.4;">Retour sur dépense publicitaire constaté</p>
+      </div>
+
+      <div style="padding: 32px 24px; border-right: 1px solid rgba(236,231,223,0.15); transition: background 0.25s;" onmouseover="this.style.background='rgba(244,112,10,0.1)'" onmouseout="this.style.background='transparent'">
+        <span style="font-family: var(--mono); font-size: 10px; color: rgba(236,231,223,0.45); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 14px;">02 / ACQUISITION</span>
+        <div style="font-family: var(--disp); font-weight: 900; font-size: clamp(36px, 3.8vw, 54px); line-height: 1; color: var(--orange); letter-spacing: -0.03em;" data-count="34" data-prefix="−" data-suffix="%">0</div>
+        <p style="font-family: var(--mono); font-size: 11px; color: rgba(236,231,223,0.6); margin-top: 12px; line-height: 1.4;">Réduction moyenne du coût par prospect</p>
+      </div>
+
+      <div style="padding: 32px 24px; border-right: 1px solid rgba(236,231,223,0.15); transition: background 0.25s;" onmouseover="this.style.background='rgba(62,224,137,0.1)'" onmouseout="this.style.background='transparent'">
+        <span style="font-family: var(--mono); font-size: 10px; color: rgba(236,231,223,0.45); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 14px;">03 / SEO &amp; GEO</span>
+        <div style="font-family: var(--disp); font-weight: 900; font-size: clamp(36px, 3.8vw, 54px); line-height: 1; color: #3ee089; letter-spacing: -0.03em;" data-count="128" data-prefix="+" data-suffix="%">0</div>
+        <p style="font-family: var(--mono); font-size: 11px; color: rgba(236,231,223,0.6); margin-top: 12px; line-height: 1.4;">Hausse du trafic Google &amp; Moteurs IA</p>
+      </div>
+
+      <div style="padding: 32px 24px; transition: background 0.25s;" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'">
+        <span style="font-family: var(--mono); font-size: 10px; color: rgba(236,231,223,0.45); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 14px;">04 / RÉACTIVITÉ</span>
+        <div style="font-family: var(--disp); font-weight: 900; font-size: clamp(36px, 3.8vw, 54px); line-height: 1; color: var(--paper); letter-spacing: -0.03em;" data-count="48" data-suffix="h">0</div>
+        <p style="font-family: var(--mono); font-size: 11px; color: rgba(236,231,223,0.6); margin-top: 12px; line-height: 1.4;">Pour poser un diagnostic et un plan d'action</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- TEASER: projets + tips + lab -->
+<section class="teaser">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow o"><span data-fr>À explorer</span><span data-en>Explore</span></span>
+      <h2 data-fr>Le travail, la R&amp;D et ce que j'apprends.</h2>
+      <h2 data-en class="blk">The work, testing, and what I learned.</h2>
+    </div>
+    <div class="tz-grid">
+      <a href="projets.html" class="tz rv magnet">
+        <span class="lab" data-fr>Projets</span><span class="lab" data-en>Work</span>
+        <h3 data-fr>6 collabs, chiffres à l'appui</h3><h3 data-en>6 collabs, numbers included</h3>
+        <p data-fr>Assurance, hôtellerie, conseil B2B. Ce que j'ai fait, et l'écart que ça a créé.</p>
+        <p data-en class="blk">Insurance, hospitality, B2B consulting. What I did, and the gap it created.</p>
+        <span class="go"><span data-fr>Voir les projets</span><span data-en>See the work</span> →</span>
+      </a>
+      <a href="tips.html" class="tz rv magnet">
+        <span class="lab">Tips</span>
+        <h3 data-fr>Des astuces que j'applique vraiment</h3><h3 data-en>Tips I actually use</h3>
+        <p data-fr>SEO, GEO, ads, vidéo. Des trucs concrets que vous pouvez tester ce soir, sans moi.</p>
+        <p data-en class="blk">SEO, GEO, ads, video. Concrete stuff you can try tonight, without me.</p>
+        <span class="go"><span data-fr>Lire les tips</span><span data-en>Read the tips</span> →</span>
+      </a>
+      <div class="tz rv magnet">
+        <span class="lab" data-fr>R&amp;D / Marketplace</span><span class="lab" data-en>R&amp;D / Marketplace</span>
+        <h3 data-fr>AjinssaWeb (En dev)</h3><h3 data-en>AjinssaWeb (Building)</h3>
+        <p data-fr>Plateforme reliant créateurs UGC et marques. Mon labo d'expérimentation pour tester de nouveaux leviers d'acquisition.</p>
+        <p data-en class="blk">UGC creator marketplace platform. My testing ground for next-gen acquisition strategies.</p>
+        <span class="go"><span data-fr>Bientôt disponible</span><span data-en>Coming soon</span> ✦</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTES -->
+<section class="quotes" id="quotes">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow"><span data-fr>Ce qu'ils en disent</span><span data-en>What they say</span></span>
+      <h2 data-fr>Pas des compliments. Des résultats.</h2>
+      <h2 data-en class="blk">Not compliments. Results.</h2>
+    </div>
+    <div class="qg">
+      <div class="q rv"><div class="s">★★★★★</div>
+        <blockquote data-fr>« Nos chiffres ont grimpé et on a l'air pro. Plus clair, et ça convertit mieux. »</blockquote>
+        <blockquote data-en class="blk">"Our numbers went up and we look pro. Clearer, and it converts better."</blockquote>
+        <div class="w"><span class="av">A</span><div><b>CEO</b><span>AIMPACTIFY Maroc</span></div></div></div>
+      <div class="q rv"><div class="s">★★★★★</div>
+        <blockquote data-fr>« Du local au viral en quelques semaines. Design propre, messages qui parlent. »</blockquote>
+        <blockquote data-en class="blk">"From local to viral in a few weeks. Clean design, messages that hit."</blockquote>
+        <div class="w"><span class="av">N</span><div><b>CEO</b><span>Nsayblik</span></div></div></div>
+      <div class="q rv"><div class="s">★★★★★</div>
+        <blockquote data-fr>« L'ambiance premium a été respectée, le parcours est fluide. Les clients le ressentent. »</blockquote>
+        <blockquote data-en class="blk">"The premium feel stayed intact, the journey is smooth. Clients feel it."</blockquote>
+        <div class="w"><span class="av">G</span><div><b>CEO</b><span>The Gate Morocco</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="box rv">
+      <div>
+        <span class="eyebrow o"><span data-fr>On y va</span><span data-en>Let's do this</span></span>
+        <h2 data-fr>Dites-moi juste ce qui vous bloque.</h2>
+        <h2 data-en class="blk">Just tell me what's stuck.</h2>
+        <p data-fr>Réponse rapide, avec une première idée et un prix. Basé à Rabat, remote pour la France et le reste.</p>
+        <p data-en class="blk">Quick reply, with a first idea and a price. Based in Rabat, remote for France and everywhere else.</p>
+        <div class="btnrow" style="margin-top:24px;position:relative">
+          <a href="contact.html" class="btn solid-o magnet"><span data-fr>Ouvrir le formulaire</span><span data-en>Open the form</span><span class="arw">↗</span></a>
+          <a href="https://wa.me/212618593795" target="_blank" rel="noopener" class="btn ghost" style="border-color:rgba(236,231,223,.3);color:var(--paper)">WhatsApp</a>
+        </div>
+      </div>
+      <form class="frm" onsubmit="return sendForm(event)">
+        <div class="f"><label data-fr>Votre nom</label><label data-en class="blk">Your name</label><input type="text" required></div>
+        <div class="f"><label>Email</label><input type="email" required></div>
+        <div class="f"><label data-fr>C'est quoi le projet ?</label><label data-en class="blk">What's the project?</label><textarea required></textarea></div>
+        <button class="btn solid snd magnet" type="submit"><span data-fr>Envoyer</span><span data-en>Send</span><span class="arw">↗</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <span class="fb">EL KISSI IMAD</span>
+    <span class="fm" data-fr>© The One You Need · Rabat &amp; Remote France</span>
+    <span class="fm blk" data-en>© The One You Need · Rabat &amp; Remote France</span>
+    <div class="fs">
+      <a href="tips.html">Tips</a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="ressources.html">Ressources</a>
+      <a href="https://wa.me/212618593795" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#top"><span data-fr>Haut ↑</span><span data-en>Top ↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+const items=[['SEO/GEO','+128%','g','visites'],['CPL','−34%','or','ads'],['CVR','+42%','g','pages'],['ROAS','4.1×','g','pub'],['CTR','+39%','or','créa'],['Engagement','3.1×','g','vidéo'],['Leads','+61%','g','pipeline'],['Automation','n8n','or','workflow']];
+let h='';for(let r=0;r<2;r++){items.forEach(i=>{h+=`<span class="mq-i"><b>${i[0]}</b> <span class="${i[2]}">${i[1]}</span> ${i[3]}</span>`;});}
+document.getElementById('mq').innerHTML=h;
+
+function animateCount(el){
+  const target=parseFloat(el.dataset.count);
+  const pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';
+  const dec=(target%1!==0)?1:0;
+  let start=0,t0=null,dur=1200;
+  function step(ts){if(!t0)t0=ts;const p=Math.min((ts-t0)/dur,1);const e=1-Math.pow(1-p,3);
+    el.textContent=pre+(target*e).toFixed(dec)+suf;
+    if(p<1)requestAnimationFrame(step);else el.textContent=pre+target.toFixed(dec)+suf;}
+  requestAnimationFrame(step);
+}
+const cio=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){animateCount(en.target);cio.unobserve(en.target);}});},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une landing page = une seule action · Tips · El Kissi Imad</title>
+<meta name="description" content="Le réflexe naturel, c'est de tout mettre sur la page. C'est exactement ce qui la tue. Moins de choix, plus de conversions.">
+<meta name="theme-color" content="#F4700A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.arthead{padding:56px 0 40px;position:relative;overflow:hidden}
+.arthead .back{font-family:var(--mono);font-size:12px;color:var(--ink-soft);display:inline-flex;gap:7px;align-items:center;margin-bottom:26px}
+.arthead .back:hover{color:var(--orange)}
+.arthead .cat{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--orange)}
+.arthead h1{font-family:var(--disp);font-weight:900;font-size:clamp(34px,5vw,66px);line-height:.95;letter-spacing:-.03em;margin:14px 0 0;max-width:20ch}
+.arthead .lede{font-size:20px;line-height:1.5;color:var(--ink-soft);margin-top:22px;max-width:56ch}
+.arthead .meta{font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin-top:22px;display:flex;gap:16px;align-items:center}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--orange);width:0;z-index:60;transition:width .1s}
+.artbody{padding:20px 0 80px}
+.artbody .wrap{max-width:720px}
+.artbody h2{font-family:var(--disp);font-weight:800;font-size:clamp(24px,3vw,32px);letter-spacing:-.02em;margin:44px 0 14px}
+.artbody p{font-size:17.5px;line-height:1.7;color:var(--ink);margin-bottom:18px}
+.artbody .pull{border-left:3px solid var(--orange);background:var(--card);padding:22px 24px;font-family:var(--disp);font-weight:600;font-size:20px;line-height:1.4;letter-spacing:-.01em;margin:36px 0 10px;border-radius:0 5px 5px 0}
+.artcta{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+.related{border-top:1px solid var(--line);background:var(--card)}
+.related .wrap{padding:64px 30px}
+.related h3{font-family:var(--disp);font-weight:800;font-size:26px;letter-spacing:-.02em;margin-bottom:24px}
+.rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rel{border:1px solid var(--line);border-radius:5px;padding:24px 22px;background:var(--paper);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.rel:hover{transform:translateY(-3px);box-shadow:6px 6px 0 var(--blue)}
+.rel:nth-child(2):hover{box-shadow:6px 6px 0 var(--orange)}
+.rel .c{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.rel h4{font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:-.01em;margin:9px 0 12px;line-height:1.15}
+.rel .go{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--orange);margin-top:auto}
+@media(max-width:620px){.rel-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="fr page">
+<div class="progress" id="prog"></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><span class="mk">I</span>EL KISSI IMAD</a>
+    <nav class="nav-links">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="tips.html" class="active"><span data-fr>Tips</span><span data-en>Tips</span></a>
+      <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang"><button class="on" id="lf" onclick="setLang('fr')">FR</button><button id="le" onclick="setLang('en')">EN</button></div>
+      <a href="contact.html" class="btn solid-o magnet"><span data-fr>On parle ?</span><span data-en>Let's talk</span><span class="arw">↗</span></a>
+      <button class="mtog" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mm" id="mm">
+  <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+  <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+  <a href="tips.html"><span data-fr>Tips</span><span data-en>Tips</span></a>
+  <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+</div>
+
+<article>
+  <div class="arthead">
+    <div class="wrap" style="max-width:720px">
+      <a href="tips.html" class="back">← <span data-fr>Tous les tips</span><span data-en>All tips</span></a>
+      <span class="cat">Ads · Landing</span>
+      <h1 data-fr>Une landing page = une seule action</h1>
+      <h1 data-en class="blk">One landing page = one action</h1>
+      <p class="lede" data-fr>Le réflexe naturel, c'est de tout mettre sur la page. C'est exactement ce qui la tue. Moins de choix, plus de conversions.</p>
+      <p class="lede blk" data-en>The natural instinct is to put everything on the page. That's exactly what kills it. Fewer choices, more conversions.</p>
+      <div class="meta"><span data-fr>Lecture 4 min</span><span data-en>4 min read</span><span>·</span><span>El Kissi Imad</span></div>
+    </div>
+  </div>
+
+  <div class="artbody">
+    <div class="wrap" data-fr>
+      <h2>Trop de portes, personne n'entre</h2>
+      <p>Une page avec cinq boutons différents demande au visiteur de choisir. Or choisir, ça fatigue. Face à trop d'options, la plupart des gens ne font rien du tout et partent.</p>
+      <h2>La question à se poser</h2>
+      <p>Quelle est la seule action que je veux ? Prendre rendez-vous ? Demander un devis ? Acheter ? Une fois que c'est clair, tout ce qui ne sert pas cette action peut dégager : les menus, les liens vers d'autres pages, les boutons secondaires.</p>
+      <h2>Ce qui reste</h2>
+      <p>Une promesse claire en haut, une preuve au milieu (avis, chiffre, logo), et un seul bouton, répété deux ou trois fois en descendant. C'est tout. Une page ennuyeuse qui convertit vaut mieux qu'une belle page qui disperse.</p>
+      <div class="pull">Vous avez une landing qui ne convertit pas ? Je vous dis quoi enlever.</div>
+      <div class="artcta">
+        <a href="contact.html" class="btn solid-o magnet">Discuter d'un projet <span class="arw">↗</span></a>
+        <a href="tips.html" class="btn ghost">Lire un autre tip</a>
+      </div>
+    </div>
+    <div class="wrap blk" data-en style="display:none">
+      <h2>Too many doors, nobody enters</h2>
+      <p>A page with five different buttons asks the visitor to choose. And choosing is tiring. Faced with too many options, most people do nothing at all and leave.</p>
+      <h2>The question to ask</h2>
+      <p>What's the one action I want? Book a call? Request a quote? Buy? Once that's clear, anything that doesn't serve it can go: menus, links to other pages, secondary buttons.</p>
+      <h2>What's left</h2>
+      <p>A clear promise up top, proof in the middle (a review, a number, a logo), and one button, repeated two or three times as you scroll. That's it. A boring page that converts beats a pretty one that scatters.</p>
+      <div class="pull">Got a landing page that won't convert? I'll tell you what to remove.</div>
+      <div class="artcta">
+        <a href="contact.html" class="btn solid-o magnet">Discuss a project <span class="arw">↗</span></a>
+        <a href="tips.html" class="btn ghost">Read another tip</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="related">
+  <div class="wrap">
+    <h3 data-fr>À lire ensuite</h3><h3 data-en class="blk">Read next</h3>
+    <div class="rel-grid">
+      <a href="tip-3-secondes.html" class="rel magnet">
+        <span class="c">Vidéo · Hook</span>
+        <h4 data-fr>Les 3 premières secondes décident de tout le reste</h4><h4 data-en class="blk">The first 3 seconds decide everything else</h4>
+        <span class="go" data-fr>Lire →</span><span class="go blk" data-en>Read →</span>
+      </a>
+      <a href="tip-fiche-google.html" class="rel magnet">
+        <span class="c">SEO · Local</span>
+        <h4 data-fr>Votre fiche Google vaut plus que votre site</h4><h4 data-en class="blk">Your Google profile beats your website</h4>
+        <span class="go" data-fr>Lire →</span><span class="go blk" data-en>Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <span class="fb">EL KISSI IMAD</span>
+    <span class="fm" data-fr>© The One You Need · Rabat, bientôt Paris</span>
+    <span class="fm blk" data-en>© The One You Need · Rabat, soon Paris</span>
+    <div class="fs">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="https://wa.me/212618593795" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+// The en/fr blocks toggle via display; ensure blk shows in EN
+function syncArtLang(){
+  const en=document.body.classList.contains('en');
+  document.querySelectorAll('.artbody .wrap').forEach(w=>{
+    if(w.hasAttribute('data-en')) w.style.display=en?'block':'none';
+    if(w.hasAttribute('data-fr')) w.style.display=en?'none':'block';
+  });
+}
+const _set=setLang;setLang=function(l){_set(l);syncArtLang();};
+document.addEventListener('DOMContentLoaded',syncArtLang);
+// reading progress
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const p=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+  document.getElementById('prog').style.width=p+'%';
+});
+</script>
+</body>
+</html>

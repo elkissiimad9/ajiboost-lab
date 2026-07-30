@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le seul rapport GA4 que je regarde chaque matin · Tips · El Kissi Imad</title>
+<meta name="description" content="GA4 est une usine à gaz. On peut y passer des heures et ne rien décider. Moi, je regarde un seul écran, tous les matins.">
+<meta name="theme-color" content="#1D3BE8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.arthead{padding:56px 0 40px;position:relative;overflow:hidden}
+.arthead .back{font-family:var(--mono);font-size:12px;color:var(--ink-soft);display:inline-flex;gap:7px;align-items:center;margin-bottom:26px}
+.arthead .back:hover{color:var(--orange)}
+.arthead .cat{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+.arthead h1{font-family:var(--disp);font-weight:900;font-size:clamp(34px,5vw,66px);line-height:.95;letter-spacing:-.03em;margin:14px 0 0;max-width:20ch}
+.arthead .lede{font-size:20px;line-height:1.5;color:var(--ink-soft);margin-top:22px;max-width:56ch}
+.arthead .meta{font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin-top:22px;display:flex;gap:16px;align-items:center}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--blue);width:0;z-index:60;transition:width .1s}
+.artbody{padding:20px 0 80px}
+.artbody .wrap{max-width:720px}
+.artbody h2{font-family:var(--disp);font-weight:800;font-size:clamp(24px,3vw,32px);letter-spacing:-.02em;margin:44px 0 14px}
+.artbody p{font-size:17.5px;line-height:1.7;color:var(--ink);margin-bottom:18px}
+.artbody .pull{border-left:3px solid var(--orange);background:var(--card);padding:22px 24px;font-family:var(--disp);font-weight:600;font-size:20px;line-height:1.4;letter-spacing:-.01em;margin:36px 0 10px;border-radius:0 5px 5px 0}
+.artcta{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+.related{border-top:1px solid var(--line);background:var(--card)}
+.related .wrap{padding:64px 30px}
+.related h3{font-family:var(--disp);font-weight:800;font-size:26px;letter-spacing:-.02em;margin-bottom:24px}
+.rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rel{border:1px solid var(--line);border-radius:5px;padding:24px 22px;background:var(--paper);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.rel:hover{transform:translateY(-3px);box-shadow:6px 6px 0 var(--blue)}
+.rel:nth-child(2):hover{box-shadow:6px 6px 0 var(--orange)}
+.rel .c{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.rel h4{font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:-.01em;margin:9px 0 12px;line-height:1.15}
+.rel .go{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--orange);margin-top:auto}
+@media(max-width:620px){.rel-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="fr page">
+<div class="progress" id="prog"></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><span class="mk">I</span>EL KISSI IMAD</a>
+    <nav class="nav-links">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="tips.html" class="active"><span data-fr>Tips</span><span data-en>Tips</span></a>
+      <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang"><button class="on" id="lf" onclick="setLang('fr')">FR</button><button id="le" onclick="setLang('en')">EN</button></div>
+      <a href="contact.html" class="btn solid-o magnet"><span data-fr>On parle ?</span><span data-en>Let's talk</span><span class="arw">↗</span></a>
+      <button class="mtog" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mm" id="mm">
+  <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+  <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+  <a href="tips.html"><span data-fr>Tips</span><span data-en>Tips</span></a>
+  <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+</div>
+
+<article>
+  <div class="arthead">
+    <div class="wrap" style="max-width:720px">
+      <a href="tips.html" class="back">← <span data-fr>Tous les tips</span><span data-en>All tips</span></a>
+      <span class="cat">Data · GA4</span>
+      <h1 data-fr>Le seul rapport GA4 que je regarde chaque matin</h1>
+      <h1 data-en class="blk">The one GA4 report I check every morning</h1>
+      <p class="lede" data-fr>GA4 est une usine à gaz. On peut y passer des heures et ne rien décider. Moi, je regarde un seul écran, tous les matins.</p>
+      <p class="lede blk" data-en>GA4 is a maze. You can spend hours in it and decide nothing. I look at one screen, every morning.</p>
+      <div class="meta"><span data-fr>Lecture 5 min</span><span data-en>5 min read</span><span>·</span><span>El Kissi Imad</span></div>
+    </div>
+  </div>
+
+  <div class="artbody">
+    <div class="wrap" data-fr>
+      <h2>Le piège des données</h2>
+      <p>Plus il y a de graphiques, moins on agit. GA4 vous noie exprès sous les métriques. La plupart ne changeront jamais une seule de vos décisions.</p>
+      <h2>Mon écran unique</h2>
+      <p>Je regarde d'où viennent les conversions, pas les visites. Quelle source amène des gens qui font l'action qui compte (achat, devis, appel). Le reste, je l'ignore la plupart du temps.</p>
+      <p>Concrètement, je construis un rapport simple : source ou campagne d'un côté, conversions et valeur de l'autre. En un coup d'œil je sais où mettre plus, et où arrêter.</p>
+      <h2>Une métrique qui ment souvent</h2>
+      <p>Le nombre de visiteurs. Une hausse de trafic qui ne convertit pas, c'est du bruit. Je préfère 100 visiteurs qui achètent à 10 000 qui repartent.</p>
+      <div class="pull">Je peux vous monter ce rapport sur votre GA4 en une session.</div>
+      <div class="artcta">
+        <a href="contact.html" class="btn solid-o magnet">Discuter d'un projet <span class="arw">↗</span></a>
+        <a href="tips.html" class="btn ghost">Lire un autre tip</a>
+      </div>
+    </div>
+    <div class="wrap blk" data-en style="display:none">
+      <h2>The data trap</h2>
+      <p>The more charts there are, the less you act. GA4 drowns you in metrics on purpose. Most of them will never change a single decision.</p>
+      <h2>My single screen</h2>
+      <p>I look at where conversions come from, not visits. Which source brings people who do the action that matters (purchase, quote, call). The rest I mostly ignore.</p>
+      <p>In practice I build one simple report: source or campaign on one side, conversions and value on the other. At a glance I know where to put more, and where to stop.</p>
+      <h2>A metric that often lies</h2>
+      <p>Visitor count. A traffic spike that doesn't convert is noise. I'll take 100 visitors who buy over 10,000 who leave.</p>
+      <div class="pull">I can set this report up on your GA4 in one session.</div>
+      <div class="artcta">
+        <a href="contact.html" class="btn solid-o magnet">Discuss a project <span class="arw">↗</span></a>
+        <a href="tips.html" class="btn ghost">Read another tip</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="related">
+  <div class="wrap">
+    <h3 data-fr>À lire ensuite</h3><h3 data-en class="blk">Read next</h3>
+    <div class="rel-grid">
+      <a href="tip-3-secondes.html" class="rel magnet">
+        <span class="c">Vidéo · Hook</span>
+        <h4 data-fr>Les 3 premières secondes décident de tout le reste</h4><h4 data-en class="blk">The first 3 seconds decide everything else</h4>
+        <span class="go" data-fr>Lire →</span><span class="go blk" data-en>Read →</span>
+      </a>
+      <a href="tip-fiche-google.html" class="rel magnet">
+        <span class="c">SEO · Local</span>
+        <h4 data-fr>Votre fiche Google vaut plus que votre site</h4><h4 data-en class="blk">Your Google profile beats your website</h4>
+        <span class="go" data-fr>Lire →</span><span class="go blk" data-en>Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <span class="fb">EL KISSI IMAD</span>
+    <span class="fm" data-fr>© The One You Need · Rabat, bientôt Paris</span>
+    <span class="fm blk" data-en>© The One You Need · Rabat, soon Paris</span>
+    <div class="fs">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="https://wa.me/212618593795" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+// The en/fr blocks toggle via display; ensure blk shows in EN
+function syncArtLang(){
+  const en=document.body.classList.contains('en');
+  document.querySelectorAll('.artbody .wrap').forEach(w=>{
+    if(w.hasAttribute('data-en')) w.style.display=en?'block':'none';
+    if(w.hasAttribute('data-fr')) w.style.display=en?'none':'block';
+  });
+}
+const _set=setLang;setLang=function(l){_set(l);syncArtLang();};
+document.addEventListener('DOMContentLoaded',syncArtLang);
+// reading progress
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const p=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+  document.getElementById('prog').style.width=p+'%';
+});
+</script>
+</body>
+</html>

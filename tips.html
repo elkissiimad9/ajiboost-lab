@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tips &amp; Insights — El Kissi Imad</title>
+<meta name="description" content="Astuces concrètes SEO, GEO, Ads et Vidéo courte testées sur le terrain.">
+<meta name="theme-color" content="#F4700A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F4700A'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='Space Mono, monospace' font-weight='700' font-size='60'>I</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* Adjustments pour la page Tips */
+.ph-clean { padding: 60px 0 30px; border-bottom: 1px solid var(--line); }
+.ph-clean h1 { font-family: var(--disp); font-weight: 900; font-size: clamp(40px, 6vw, 84px); line-height: 0.95; letter-spacing: -.035em; margin-top: 14px; }
+.ph-clean p { color: var(--ink-soft); font-size: 18px; margin-top: 16px; max-width: 52ch; }
+
+.filter-bar { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 36px; }
+.filter { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { font-family: var(--mono); font-size: 12.5px; border: 1px solid var(--line-2); border-radius: 40px; padding: 8px 16px; cursor: none; background: transparent; transition: all .2s ease; color: var(--ink-soft); font-weight: 700; }
+.chip.on { background: var(--orange); color: #fff; border-color: var(--orange); }
+.chip:hover { border-color: var(--orange); color: var(--ink); }
+.chip.on:hover { color: #fff; }
+
+.search-box { position: relative; min-width: 260px; }
+.search-box input { width: 100%; background: var(--card); border: 1px solid var(--line-2); border-radius: 40px; padding: 10px 18px 10px 38px; font-family: var(--body); font-size: 13.5px; outline: none; transition: border-color .2s; }
+.search-box input:focus { border-color: var(--orange); }
+.search-box svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; fill: var(--ink-soft); }
+
+/* Grille des Tips */
+.tips-section { padding: 40px 0 90px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.tip-card { border: 1px solid var(--line-2); border-radius: 6px; overflow: hidden; background: var(--card); display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s, border-color .25s; text-decoration: none; color: inherit; }
+.tip-card:hover { transform: translateY(-4px); box-shadow: 8px 8px 0 var(--blue); border-color: var(--blue); }
+.tip-card:nth-child(3n+2):hover { box-shadow: 8px 8px 0 var(--orange); border-color: var(--orange); }
+.tip-card:nth-child(3n+3):hover { box-shadow: 8px 8px 0 var(--green); border-color: var(--green); }
+
+.tip-card .top-banner { height: 110px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.tip-card .top-banner .banner-icon { font-family: var(--disp); font-weight: 900; font-size: 48px; color: rgba(255,255,255,.95); z-index: 1; letter-spacing: -.02em; }
+
+.tip-card:nth-child(3n+1) .top-banner { background: var(--blue); }
+.tip-card:nth-child(3n+2) .top-banner { background: var(--orange); }
+.tip-card:nth-child(3n+3) .top-banner { background: var(--ink); }
+
+.tip-card .card-body { padding: 24px 22px; display: flex; flex-direction: column; flex: 1; }
+.tip-card .cat-badge { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--orange); font-weight: 700; margin-bottom: 8px; }
+.tip-card h3 { font-family: var(--disp); font-weight: 700; font-size: 20px; line-height: 1.2; letter-spacing: -.01em; margin: 0 0 10px; }
+.tip-card p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.55; flex: 1; margin-bottom: 20px; }
+
+.tip-card .card-foot { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); }
+.tip-card .card-foot .read-more { color: var(--orange); font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
+
+/* Newsletter */
+.news { border-top: 1px solid var(--line); background: var(--card); }
+.news .wrap { padding: 80px 30px; display: grid; grid-template-columns: 1fr .9fr; gap: 40px; align-items: center; }
+.news h2 { font-family: var(--disp); font-weight: 800; font-size: clamp(28px, 3.6vw, 44px); letter-spacing: -.02em; line-height: 1.02; }
+.news h2 .o { color: var(--orange); }
+.news p { color: var(--ink-soft); margin-top: 14px; max-width: 40ch; font-size: 16px; }
+.news form { display: flex; gap: 10px; flex-wrap: wrap; }
+.news input { flex: 1; min-width: 220px; background: var(--paper); border: 1px solid var(--line-2); border-radius: 40px; padding: 14px 20px; font-family: var(--body); font-size: 14px; outline: none; }
+.news input:focus { border-color: var(--orange); }
+
+@media(max-width: 900px) {
+  .hero-feat-grid { grid-template-columns: 1fr !important; }
+  .grid { grid-template-columns: 1fr 1fr; }
+  .news .wrap { grid-template-columns: 1fr; gap: 28px; }
+}
+@media(max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .filter-bar { flex-direction: column; align-items: stretch; }
+  .search-box { width: 100%; }
+}
+</style>
+</head>
+<body class="fr page">
+
+<!-- HEADER PROPRE (AVEC LIEN RESSOURCES INCLUS) -->
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><span class="mk">I</span>EL KISSI IMAD</a>
+    <nav class="nav-links">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="tips.html" class="active"><span data-fr>Tips</span><span data-en>Tips</span></a>
+      <a href="ressources.html"><span data-fr>Ressources</span><span data-en>Resources</span></a>
+      <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang">
+        <button class="on" id="lf" onclick="setLang('fr')">FR</button>
+        <button id="le" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="contact.html" class="btn solid-o magnet"><span data-fr>On parle ?</span><span data-en>Let's talk</span><span class="arw">↗</span></a>
+      <button class="mtog" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mm" id="mm">
+  <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+  <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+  <a href="tips.html"><span data-fr>Tips</span><span data-en>Tips</span></a>
+  <a href="ressources.html"><span data-fr>Ressources</span><span data-en>Resources</span></a>
+  <a href="contact.html"><span data-fr>Contact</span><span data-en>Contact</span></a>
+</div>
+
+<!-- SECTION TITRE & FILTRES -->
+<section class="ph-clean">
+  <div class="wrap">
+    <span class="eyebrow o">✦ Base de connaissances</span>
+    <h1 data-fr>Ce qui marche <span class="o">sur le terrain</span>.</h1>
+    <h1 data-en class="blk">What <span class="o">actually</span> works.</h1>
+    <p data-fr>Aucune théorie réchauffée. Uniquement des principes d'acquisition, de SEO/GEO et de conversion testés directement sur mes projets.</p>
+    <p data-en class="blk">No recycled theory. Only acquisition, SEO/GEO and conversion frameworks tested on real projects.</p>
+
+    <div class="filter-bar">
+      <div class="filter" id="filter">
+        <button class="chip on" data-f="all" onclick="filterCategory('all', this)">Tous les conseils</button>
+        <button class="chip" data-f="seo" onclick="filterCategory('seo', this)">SEO &amp; GEO</button>
+        <button class="chip" data-f="ads" onclick="filterCategory('ads', this)">Ads &amp; Budget</button>
+        <button class="chip" data-f="video" onclick="filterCategory('video', this)">Vidéo &amp; Hooks</button>
+        <button class="chip" data-f="data" onclick="filterCategory('data', this)">Data GA4</button>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="tipSearch" placeholder="Rechercher un conseil..." onkeyup="filterTips()">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSEIL A LA UNE (HERO TIP ÉPURÉ & BRUT) -->
+<section style="padding: 50px 0 20px;">
+  <div class="wrap">
+    <a href="tip-3-secondes.html" class="rv magnet hero-feat-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; background: var(--ink); color: var(--paper); border: 1px solid var(--line-2); border-radius: 6px; overflow: hidden; text-decoration: none; transition: transform .3s, box-shadow .3s;">
+      
+      <div style="padding: 44px 40px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+            <span style="font-family: var(--mono); font-size: 11px; background: var(--orange); color: #fff; padding: 4px 10px; border-radius: 30px; font-weight: 700; text-transform: uppercase;">
+              Essential #01
+            </span>
+            <span style="font-family: var(--mono); font-size: 11px; color: rgba(236,231,223,0.5);">Vidéo &amp; Rétention</span>
+          </div>
+
+          <h2 style="font-family: var(--disp); font-weight: 900; font-size: clamp(28px, 3.5vw, 44px); line-height: 1.02; letter-spacing: -.025em; margin-bottom: 14px;" data-fr>
+            Les 3 premières secondes décident de tout le reste.
+          </h2>
+          <h2 style="font-family: var(--disp); font-weight: 900; font-size: clamp(28px, 3.5vw, 44px); line-height: 1.02; letter-spacing: -.025em; margin-bottom: 14px;" class="blk" data-en>
+            The first 3 seconds decide everything else.
+          </h2>
+
+          <p style="color: rgba(236,231,223,0.7); font-size: 16px; line-height: 1.55; max-width: 46ch;" data-fr>
+            Pourquoi la plupart des Reels échouent avant la 4e seconde, et le protocole simple que j'utilise pour fixer l'attention sans budget géant.
+          </p>
+          <p style="color: rgba(236,231,223,0.7); font-size: 16px; line-height: 1.55; max-width: 46ch;" class="blk" data-en>
+            Why most Reels fail before second four, and the simple protocol I use to hook attention without a huge budget.
+          </p>
+        </div>
+
+        <div style="margin-top: 32px; font-family: var(--mono); font-size: 12px; color: rgba(236,231,223,0.6); display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(236,231,223,0.15); padding-top: 18px;">
+          <span data-fr>Lecture : 5 minutes</span><span data-en>5 min read</span>
+          <span style="color: var(--orange); font-weight: 700; display: flex; align-items: center; gap: 6px;" data-fr>Lire la suite ↗</span>
+        </div>
+      </div>
+
+      <!-- Côté Visuel Brut -->
+      <div style="background: rgba(255,255,255,0.03); border-left: 1px solid rgba(236,231,223,0.12); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; position: relative;">
+        <span style="font-family: var(--disp); font-weight: 900; font-size: 130px; line-height: 0.8; color: rgba(236,231,223,0.12); user-select: none;">03s</span>
+        <span style="font-family: var(--mono); font-size: 11px; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 12px;">Hook Framework</span>
+      </div>
+
+    </a>
+  </div>
+</section>
+
+<!-- GRILLE DES TIPS -->
+<section class="tips-section">
+  <div class="wrap">
+    <div class="grid" id="grid">
+
+      <!-- Tip 1 -->
+      <a href="tip-fiche-google.html" class="tip-card rv magnet" data-cat="seo">
+        <div class="top-banner"><span class="banner-icon">GEO</span></div>
+        <div class="card-body">
+          <span class="cat-badge">SEO &amp; GEO Local</span>
+          <h3 data-fr>Votre fiche Google vaut plus que votre site</h3>
+          <h3 data-en class="blk">Your Google profile beats your website</h3>
+          <p data-fr>Pour un commerce local, la fiche Google Business &amp; les réponses IA captent la majorité des clients directs. Voici les 4 champs négligés.</p>
+          <p data-en class="blk">For a local business, your Google profile &amp; AI answers capture most clients. Here are the 4 overlooked fields.</p>
+          <div class="card-foot">
+            <span data-fr>Lecture 4 min</span><span data-en>4 min read</span>
+            <span class="read-more"><span data-fr>Lire</span><span data-en>Read</span> →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Tip 2 -->
+      <a href="tip-budget-ads.html" class="tip-card rv magnet" data-cat="ads data">
+        <div class="top-banner"><span class="banner-icon">ADS</span></div>
+        <div class="card-body">
+          <span class="cat-badge">Ads &amp; Budget</span>
+          <h3 data-fr>Ne coupez jamais une pub le week-end</h3>
+          <h3 data-en class="blk">Never kill an ad on a weekend</h3>
+          <p data-fr>La plupart des annonceurs jugent une campagne Meta/Google trop tôt. La règle de volume exacte pour décider sans paniquer.</p>
+          <p data-en class="blk">Most advertisers judge campaigns too early. The exact volume rule to decide without panicking.</p>
+          <div class="card-foot">
+            <span data-fr>Lecture 6 min</span><span data-en>6 min read</span>
+            <span class="read-more"><span data-fr>Lire</span><span data-en>Read</span> →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Tip 3 -->
+      <a href="tip-3-secondes.html" class="tip-card rv magnet" data-cat="video">
+        <div class="top-banner"><span class="banner-icon">3s</span></div>
+        <div class="card-body">
+          <span class="cat-badge">Vidéo &amp; Hook</span>
+          <h3 data-fr>Les 3 secondes qui décident de tout</h3>
+          <h3 data-en class="blk">The 3 seconds that decide it all</h3>
+          <p data-fr>Le test visuel rapide que je fais avant de publier un Reel : si l'enjeu n'est pas compris en 3s, je recommence le début.</p>
+          <p data-en class="blk">The quick visual test I run before publishing: if the point isn't clear in 3s, I redo the start.</p>
+          <div class="card-foot">
+            <span data-fr>Lecture 5 min</span><span data-en>5 min read</span>
+            <span class="read-more"><span data-fr>Lire</span><span data-en>Read</span> →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Tip 4 -->
+      <a href="tip-ga4.html" class="tip-card rv magnet" data-cat="data seo">
+        <div class="top-banner"><span class="banner-icon">GA4</span></div>
+        <div class="card-body">
+          <span class="cat-badge">Data &amp; GA4</span>
+          <h3 data-fr>Le seul rapport GA4 que je regarde chaque matin</h3>
+          <h3 data-en class="blk">The one GA4 report I check daily</h3>
+          <p data-fr>GA4 noie tout le monde sous des métriques inutiles. Je n'en regarde qu'un seul écran pour connaître l'origine exacte des conversions.</p>
+          <p data-en class="blk">GA4 drowns everyone in noise. I only track one single view to know where conversions originate.</p>
+          <div class="card-foot">
+            <span data-fr>Lecture 5 min</span><span data-en>5 min read</span>
+            <span class="read-more"><span data-fr>Lire</span><span data-en>Read</span> →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Tip 5 -->
+      <a href="tip-landing.html" class="tip-card rv magnet" data-cat="ads seo">
+        <div class="top-banner"><span class="banner-icon">CRO</span></div>
+        <div class="card-body">
+          <span class="cat-badge">Ads &amp; Landing Page</span>
+          <h3 data-fr>Une landing page = une seule action</h3>
+          <h3 data-en class="blk">One landing page = one single action</h3>
+          <p data-fr>Proposer 5 choix sur une page d'atterrissage équivaut à n'en obtenir aucun. Pourquoi enlever des éléments fait monter le CVR.</p>
+          <p data-en class="blk">Offering 5 choices gets zero done. Why removing elements boosts conversion rates instantly.</p>
+          <div class="card-foot">
+            <span data-fr>Lecture 4 min</span><span data-en>4 min read</span>
+            <span class="read-more"><span data-fr>Lire</span><span data-en>Read</span> →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Tip 6 -->
+      <a href="tip-hook-copy.html" class="tip-card rv magnet" data-cat="ads video">
+        <div class="top-banner"><span class="banner-icon">COPY</span></div>
+        <div class="card-body">
+          <span class="cat-badge">Copywriting &amp; Offres</span>
+          <h3 data-fr>Écrivez le titre avant le produit</h3>
+          <h3 data-en class="blk">Write the headline before the product</h3>
+          <p data-fr>Si vous n'arrivez pas à rédiger une accroche qui donne envie, c'est que l'offre elle-même est confuse. Le test d'accroche inverse.</p>
+          <p data-en class="blk">If you can't write a compelling headline, the offer itself is fuzzy. The reverse headline test.</p>
+          <div class="card-foot">
+            <span data-fr>Lecture 5 min</span><span data-en>5 min read</span>
+            <span class="read-more"><span data-fr>Lire</span><span data-en>Read</span> →</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <p id="empty" style="display:none; text-align:center; padding: 40px 0; font-size: 14px; font-family: var(--mono);" data-fr>Aucun conseil trouvé dans cette catégorie.</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="news">
+  <div class="wrap">
+    <div class="rv">
+      <h2 data-fr>Un conseil par semaine, <span class="o">rien d'autre</span>.</h2>
+      <h2 data-en class="blk">One insight a week, <span class="o">nothing else</span>.</h2>
+      <p data-fr>Pas de spam, pas de jargon commercial. Uniquement une méthode d'acquisition directement testée et applicable.</p>
+      <p data-en class="blk">No spam, no fluff. Just one tested acquisition method you can try right away.</p>
+    </div>
+    <form class="rv" onsubmit="return sendForm(event)">
+      <input type="email" required placeholder="votre@email.com">
+      <button class="btn solid-o magnet" type="submit"><span data-fr>Je m'inscris</span><span data-en>Sign me up</span><span class="arw">↗</span></button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap ft">
+    <span class="fb">EL KISSI IMAD</span>
+    <span class="fm" data-fr>© The One You Need · Rabat &amp; Remote France</span>
+    <span class="fm blk" data-en>© The One You Need · Rabat &amp; Remote France</span>
+    <div class="fs">
+      <a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a>
+      <a href="projets.html"><span data-fr>Projets</span><span data-en>Work</span></a>
+      <a href="ressources.html">Ressources</a>
+      <a href="https://wa.me/212618593795" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#top"><span data-fr>Haut ↑</span><span data-en>Top ↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+let activeCat = 'all';
+
+function filterCategory(cat, btn) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  btn.classList.add('on');
+  activeCat = cat;
+  filterTips();
+}
+
+function filterTips() {
+  const searchQuery = document.getElementById('tipSearch').value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.tip-card');
+  let shown = 0;
+
+  cards.forEach(card => {
+    const matchesCat = (activeCat === 'all' || card.dataset.cat.includes(activeCat));
+    const textContent = card.innerText.toLowerCase();
+    const matchesSearch = textContent.includes(searchQuery);
+
+    if (matchesCat && matchesSearch) {
+      card.style.display = 'flex';
+      shown++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  document.getElementById('empty').style.display = shown === 0 ? 'block' : 'none';
+}
+</script>
+</body>
+</html>
