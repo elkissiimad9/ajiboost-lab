@@ -106,10 +106,10 @@
     <div class="filter-bar">
       <div class="filter">
         <button class="chip on" onclick="filterRes('all', this)">Toutes les ressources</button>
+        <button class="chip" onclick="filterRes('ai', this)">Prompts AI &amp; Claude</button>
         <button class="chip" onclick="filterRes('templates', this)">Frameworks &amp; Checklists</button>
         <button class="chip" onclick="filterRes('tracking', this)">GA4 &amp; Consent Mode v2</button>
         <button class="chip" onclick="filterRes('automation', this)">n8n Workflows Production</button>
-        <button class="chip" onclick="filterRes('ai', this)">Prompts AI &amp; Claude</button>
       </div>
     </div>
   </div>
@@ -119,7 +119,18 @@
   <div class="wrap">
     <div class="res-grid" id="resGrid">
 
-      <!-- Ressource AI -->
+      <!-- NOUVELLE RESSOURCE 1 : 5 PROMPTS LINKEDIN -->
+      <div class="res-card rv magnet" data-cat="ai templates" onclick="openModal('res8')">
+        <span class="tag-badge">IA &amp; Copywriting B2B</span>
+        <h3>5 Master Prompts Claude AI : Dompter l'Algorithme LinkedIn</h3>
+        <p>Les 5 prompts stratégiques pour décoder les patterns viraux, générer des hooks sous 220 caractères, optimiser le Dwell Time et concevoir des carrousels à fort taux de partage.</p>
+        <div class="action-row">
+          <span class="type-format">5 Prompts Spécifiques</span>
+          <span class="dl-link">Copier les prompts ↗</span>
+        </div>
+      </div>
+
+      <!-- RESSOURCE 2 : SCHOLARSHIP PROMPT -->
       <div class="res-card rv magnet" data-cat="ai templates" onclick="openModal('res7')">
         <span class="tag-badge">IA &amp; Orientation Éducation</span>
         <h3>Master Prompt Claude AI : Mentor Bourses d'Études à l'Étranger</h3>
@@ -130,7 +141,7 @@
         </div>
       </div>
 
-      <!-- Ressource 1 -->
+      <!-- RESSOURCE 3 : GA4 -->
       <div class="res-card rv magnet" data-cat="tracking" onclick="openModal('res1')">
         <span class="tag-badge">Tracking &amp; Analytics Advanced</span>
         <h3>Plan de Marquage GA4 + Consent Mode v2 (Production)</h3>
@@ -141,7 +152,7 @@
         </div>
       </div>
 
-      <!-- Ressource 2 -->
+      <!-- RESSOURCE 4 : SEO & GEO -->
       <div class="res-card rv magnet" data-cat="templates" onclick="openModal('res2')">
         <span class="tag-badge">SEO &amp; GEO (AI Search Engine)</span>
         <h3>Checklist d'Optimisation SEO Local &amp; Moteurs IA</h3>
@@ -152,7 +163,7 @@
         </div>
       </div>
 
-      <!-- Ressource 3 -->
+      <!-- RESSOURCE 5 : N8N -->
       <div class="res-card rv magnet" data-cat="automation" onclick="openModal('res3')">
         <span class="tag-badge">Automation n8n Production</span>
         <h3>Workflow n8n : Instant Lead Dispatch &amp; Alert WhatsApp</h3>
@@ -163,7 +174,7 @@
         </div>
       </div>
 
-      <!-- Ressource 4 -->
+      <!-- RESSOURCE 6 : HOOKS VIDEO -->
       <div class="res-card rv magnet" data-cat="templates" onclick="openModal('res4')">
         <span class="tag-badge">Vidéo &amp; Performance Hooks</span>
         <h3>20 Structures de Hooks Viraux (Neuro-Rétention)</h3>
@@ -174,7 +185,7 @@
         </div>
       </div>
 
-      <!-- Ressource 5 -->
+      <!-- RESSOURCE 7 : CPL CALCULATOR -->
       <div class="res-card rv magnet" data-cat="tracking" onclick="openModal('res5')">
         <span class="tag-badge">Meta &amp; Google Ads ROI</span>
         <h3>Calculateur de Rentabilité &amp; CPL Max Acceptable</h3>
@@ -185,7 +196,7 @@
         </div>
       </div>
 
-      <!-- Ressource 6 -->
+      <!-- RESSOURCE 8 : LANDING PAGE CRO -->
       <div class="res-card rv magnet" data-cat="templates" onclick="openModal('res6')">
         <span class="tag-badge">Landing Pages &amp; CRO</span>
         <h3>Anatomie d'une Landing Page à +30% de Conversion</h3>
@@ -204,9 +215,7 @@
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-body" id="modalContent">
-      <!-- Le contenu dynamique s'affiche ici -->
-    </div>
+    <div class="modal-body" id="modalContent"></div>
   </div>
 </div>
 
@@ -227,7 +236,21 @@
 
 <script src="assets/app.js"></script>
 <script>
-// Prompt brut Master pour la copie directe sans balises HTML
+const rawLinkedInPrompts = `PROMPT 1: Content Intelligence & Pattern Decoder
+Act as a B2B Content Intelligence Architect & Behavioral Analyst. Analyze top-performing LinkedIn posts in [INSERT NICHE]. Deconstruct their success into actionable mechanics: 1. Hook structures used before the 'see more' button, 2. Psychological & professional triggers that drive saves/shares, 3. Dwell-time retention mechanisms. Identify 3 white-space content gaps competitors miss and output an execution matrix.
+
+PROMPT 2: The Hook Engineering Engine (Who/What/How)
+Act as an Elite Direct-Response Copywriter specializing in LinkedIn growth. Generate 15 high-retention hooks for a post on [INSERT TOPIC]. Each hook MUST satisfy 3 criteria in <220 characters: 1. Who: Identify target audience explicitly, 2. What: Frame the core friction or opportunity, 3. How: Promise concrete, tangible value. Use pattern interrupts, contrarian angles, and zero corporate jargon.
+
+PROMPT 3: High-Retention Script & Dwell Builder
+Act as a B2B Behavioral Copywriter. Write a high-retention LinkedIn post about [INSERT TOPIC] optimized for Dwell Time. Requirements: Choose the optimal framework (PAS, AIDA, or Story-Bridge-Offer) & explain why. Structure with single-line pacing and clean whitespace. Build dramatic tension before delivering the core takeaway. End with an organic, debate-stimulating question.
+
+PROMPT 4: Save-Optimized Carousel Architect
+Act as a Micro-Learning Content Architect. Design a 7-slide LinkedIn PDF Carousel on [INSERT TOPIC] engineered for maximum Saves & Shares. For each slide, specify: 1. Punchy Header (<5 words), 2. Ultra-dense breakdown (<25 words, zero filler), 3. Visual Cue/Diagram concept to illustrate the point, 4. One sticky bottom-line takeaway. Ensure logical progression from Slide 1 Hook to Slide 7 CTA.
+
+PROMPT 5: 30-Day Sequential Growth Architect
+Act as a B2B LinkedIn Growth Architect. Build a 30-day sequential content calendar for [INSERT NICHE/OFFER]. Structure across 4 pillars: 1. Authority & Frameworks (40%), 2. Proof & Case Studies (30%), 3. Industry Hot Takes (20%), 4. Direct Conversion (10%). Sequence topics so each post builds trust for the next. Assign optimal format (Carousel, Text, Image) for every day.`;
+
 const rawScholarshipPrompt = `You are an expert Global Study Abroad Mentor and Scholarship Research Assistant. Your job is to guide a student from "I'm confused about where to even start" through country/course selection, scholarship matching, exam prep, and final application submission — without needing a paid consultant for basic research and organization.
 
 STEP 1 — COUNTRY & COURSE DISCOVERY (for students who are undecided or confused)
@@ -361,6 +384,34 @@ CORE RULES
 11. Link only to official exam-prep resources; never generate "official-sounding" practice questions.`;
 
 const modalData = {
+  res8: {
+    tag: "IA & Copywriting B2B",
+    title: "5 Master Prompts Claude AI : Dompter l'Algorithme LinkedIn",
+    rawText: rawLinkedInPrompts,
+    content: `
+      <p><b>À propos de cette ressource :</b></p>
+      <p>Voici la suite complète des <b>5 Master Prompts Claude AI / ChatGPT</b> pour structurer une stratégie de contenu B2B ultra-performante sur LinkedIn et maximiser la portée organique.</p>
+      
+      <div class="expert-note">
+        💡 <b>Mode d'emploi :</b> Remplacez les balises entre crochets (ex: <code>[INSERT NICHE]</code> ou <code>[INSERT TOPIC]</code>) par votre secteur d'activité avant de lancer le prompt.
+      </div>
+
+      <h4>Prompt 1 : Content Intelligence & Pattern Decoder</h4>
+      <pre>Act as a B2B Content Intelligence Architect & Behavioral Analyst. Analyze top-performing LinkedIn posts in [INSERT NICHE]. Deconstruct their success into actionable mechanics: 1. Hook structures used before the 'see more' button, 2. Psychological & professional triggers that drive saves/shares, 3. Dwell-time retention mechanisms. Identify 3 white-space content gaps competitors miss and output an execution matrix.</pre>
+
+      <h4>Prompt 2 : The Hook Engineering Engine (Who/What/How)</h4>
+      <pre>Act as an Elite Direct-Response Copywriter specializing in LinkedIn growth. Generate 15 high-retention hooks for a post on [INSERT TOPIC]. Each hook MUST satisfy 3 criteria in &lt;220 characters: 1. Who: Identify target audience explicitly, 2. What: Frame the core friction or opportunity, 3. How: Promise concrete, tangible value. Use pattern interrupts, contrarian angles, and zero corporate jargon.</pre>
+
+      <h4>Prompt 3 : High-Retention Script & Dwell Builder</h4>
+      <pre>Act as a B2B Behavioral Copywriter. Write a high-retention LinkedIn post about [INSERT TOPIC] optimized for Dwell Time. Requirements: Choose the optimal framework (PAS, AIDA, or Story-Bridge-Offer) & explain why. Structure with single-line pacing and clean whitespace. Build dramatic tension before delivering the core takeaway. End with an organic, debate-stimulating question.</pre>
+
+      <h4>Prompt 4 : Save-Optimized Carousel Architect</h4>
+      <pre>Act as a Micro-Learning Content Architect. Design a 7-slide LinkedIn PDF Carousel on [INSERT TOPIC] engineered for maximum Saves & Shares. For each slide, specify: 1. Punchy Header (&lt;5 words), 2. Ultra-dense breakdown (&lt;25 words, zero filler), 3. Visual Cue/Diagram concept to illustrate the point, 4. One sticky bottom-line takeaway. Ensure logical progression from Slide 1 Hook to Slide 7 CTA.</pre>
+
+      <h4>Prompt 5 : 30-Day Sequential Growth Architect</h4>
+      <pre>Act as a B2B LinkedIn Growth Architect. Build a 30-day sequential content calendar for [INSERT NICHE/OFFER]. Structure across 4 pillars: 1. Authority & Frameworks (40%), 2. Proof & Case Studies (30%), 3. Industry Hot Takes (20%), 4. Direct Conversion (10%). Sequence topics so each post builds trust for the next. Assign optimal format (Carousel, Text, Image) for every day.</pre>
+    `
+  },
   res7: {
     tag: "IA & Orientation Éducation",
     title: "Master Prompt Claude AI : Mentor Bourses d'Études à l'Étranger",
@@ -391,7 +442,7 @@ const modalData = {
     'ad_personalization': 'denied',
     'wait_for_update': 500
   });
-<\/script>
+</script>
 
 window.dataLayer.push({
   'event': 'generate_lead',
@@ -402,8 +453,7 @@ window.dataLayer.push({
 });`,
     content: `
       <p>Pour garantir des métriques 100% fiables et respecter les exigences RGPD / Consent Mode v2 en Europe, voici l'architecture exacte à déployer sur Google Tag Manager :</p>
-
-      <h4>1. Initialisation du Consent Mode v2 (Head de votre site)</h4>
+      <h4>1. Initialisation du Consent Mode v2</h4>
       <pre>&lt;script&gt;
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -416,8 +466,7 @@ window.dataLayer.push({
     'wait_for_update': 500
   });
 &lt;/script&gt;</pre>
-
-      <h4>2. Push DataLayer lors de la génération d'un Lead qualifié</h4>
+      <h4>2. Push DataLayer lors de la génération d'un Lead</h4>
       <pre>window.dataLayer.push({
   'event': 'generate_lead',
   'lead_type': 'Formulaire Contact Principal',
@@ -437,19 +486,18 @@ window.dataLayer.push({
 4. Données structurées Schema.org LocalBusiness JSON-LD
 5. Formatage FAQ & Réponses Directes (<50 mots par réponse)`,
     content: `
-      <p>Aujourd'hui, l'optimisation ne concerne plus uniquement Google Search classique, mais aussi le <b>GEO (Generative Engine Optimization)</b> pour être cité par ChatGPT et Perplexity.</p>
-      
-      <h4>Phase 1 : Google Business Profile (Top 3 Pack Local)</h4>
+      <p>L'optimisation concerne aujourd'hui à la fois Google Search et le <b>GEO (Generative Engine Optimization)</b>.</p>
+      <h4>Phase 1 : Google Business Profile</h4>
       <ul>
-        <li>✅ <b>NAP Consistency :</b> Nom, Adresse et Numéro de téléphone strictement identiques sur votre site, Google et vos réseaux sociaux.</li>
-        <li>✅ <b>Catégories secondaires précises :</b> Ajoutez 3 à 5 sous-catégories pertinentes.</li>
-        <li>✅ <b>Stratégie d'avis géo-ciblés :</b> Demandez à vos clients de mentionner la ville et le service.</li>
+        <li>✅ <b>NAP Consistency :</b> Nom, Adresse et Numéro 100% identiques.</li>
+        <li>✅ <b>Catégories secondaires :</b> Ajoutez 3 à 5 sous-catégories pertinentes.</li>
+        <li>✅ <b>Avis clients :</b> Encouragez la mention de la ville et du service rendu.</li>
       </ul>
     `
   },
   res3: {
     tag: "Automation n8n Production",
-    title: "Workflow n8n : Lead Router, Qualification & Alerte WhatsApp",
+    title: "Workflow n8n : Lead Router & Alerte WhatsApp",
     rawText: `{
   "nodes": [
     {
@@ -465,7 +513,7 @@ window.dataLayer.push({
     },
     {
       "parameters": {
-        "message": "=🔥 *NOUVEAU LEAD QUALIFIÉ*\n\n👤 *Nom:* {{$json.body.name}}\n📧 *Email:* {{$json.body.email}}"
+        "message": "=🔥 *NOUVEAU LEAD QUALIFIÉ*\\n\\n👤 *Nom:* {{$json.body.name}}\\n📧 *Email:* {{$json.body.email}}"
       },
       "name": "Notification WhatsApp",
       "type": "n8n-nodes-base.whatsApp",
@@ -475,9 +523,7 @@ window.dataLayer.push({
   ]
 }`,
     content: `
-      <p>Ce workflow n8n permet d'éliminer 100% du délai de réponse commerciale. Dès qu'un prospect soumet son besoin, l'équipe est notifiée sur WhatsApp en moins de 5 secondes.</p>
-
-      <h4>Code JSON n8n à importer directement :</h4>
+      <p>Ce workflow n8n permet d'alerter votre équipe commerciale en moins de 5 secondes sur WhatsApp.</p>
       <pre>{
   "nodes": [
     {
@@ -493,7 +539,7 @@ window.dataLayer.push({
     },
     {
       "parameters": {
-        "message": "=🔥 *NOUVEAU LEAD QUALIFIÉ*\n\n👤 *Nom:* {{$json.body.name}}\n📧 *Email:* {{$json.body.email}}"
+        "message": "=🔥 *NOUVEAU LEAD QUALIFIÉ*\\n\\n👤 *Nom:* {{$json.body.name}}\\n📧 *Email:* {{$json.body.email}}"
       },
       "name": "Notification WhatsApp",
       "type": "n8n-nodes-base.whatsApp",
@@ -514,11 +560,11 @@ window.dataLayer.push({
 4. "Comment nous avons réduit notre Coût Par Lead de 34% en modifiant un seul réglage..."
 5. "L'outil gratuit de Google que 90% des dirigeants oublient d'installer."`,
     content: `
-      <p>Ces structures sont basées sur le principe de rupture de motif (Pattern Interrupt) pour stopper le pouce de l'utilisateur.</p>
+      <p>Structures basées sur la rupture de motif (Pattern Interrupt) :</p>
       <ul>
         <li>🔥 <i>"Arrêtez de dépenser de l'argent dans [Pratique courante]. Voici ce qu'il faut faire à la place..."</i></li>
         <li>🔥 <i>"La plupart des agences vous mentent sur [Sujet]. Voici la vérité..."</i></li>
-        <li>🔥 <i>"Comment nous avons réduit notre Coût Par Lead de 34% en modifiant un seul réglage..."</i></li>
+        <li>🔥 <i>"Pourquoi votre site web à 5 000€ ne vous ramène aucun client..."</i></li>
       </ul>
     `
   },
